@@ -1,59 +1,74 @@
-.body{
-    margin: 0;
-    padding: 0;
+* {
+  color: black;
+  font-family: 'Public Sans', sans-serif;
 }
-.main-container{
-    height: 95vh;
-    width: 100%;
-}
-.first-child-container{
-    background: rgb(197, 231, 227);
-    position: fixed;
-    float: left;
-    height: 95vh;
-    width: 30%;
-    border-radius: 25px;
-}
-.myPicture{
-    width: 30%;
-    margin-top: 10%;
-    margin-left: 35%;
-    border-radius: 80px;
-}
-.column{
-    flex-direction:column;
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.item-1{
-    background: lightcoral;
-    height:10vh;
-    border-radius: 25px;
 
+body {
+  background: #cbb07b;
+  margin: auto 20px;
 }
-.item-2{
-    background: rgb(123, 160, 116);
-    height:10vh;
-    margin-top: 5%;
-    border-radius: 25px;
+
+#title {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+  font-size: 3rem;
+  margin-top: 5%;
 }
-.item-3{
-    background: rgb(41, 28, 102);
-    height:10vh;
-    margin-top: 5%;
-    border-radius: 25px;
+
+#text-one {
+  text-align: center;
+  margin-top: 10%;
 }
-.item-4{
-    background: rgb(202, 21, 21);
-    height:10vh;
-    margin-top: 5%;
-    border-radius: 25px;
+
+#container-input {
+  padding: 1rem;
+  margin-top: 3%;
+  width: 290px;
 }
-.second-child-container{
-    background: rgb(219, 228, 212);
-    float: right;
-    height: 95vh;
-    width: 69%;
-    border-radius: 25px;
+
+#container-input h1 {
+  font-size: 15px;
+  margin-bottom: 2%;
 }
+
+#container-input #inputBook {
+  margin-bottom: 2%;
+  width: 88%;
+  padding: .6rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+#container-input button {
+  background: #21ce33;
+  color: #ffff;
+  border: 0;
+  border-radius: 5px;
+  width: 95%;
+  padding: .6rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#quantityBooks {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#booksReadsList {
+  margin: 0 auto;
+  width: 88%;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: cornsilk;
+}
+
+footer {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 10px;
+}
+/*# sourceMappingURL=main.css.map */

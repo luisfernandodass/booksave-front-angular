@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">     <link rel="stylesheet" href="/css/main.css">
     <title>Portifólio - Luis Fernando</title>
 </head>
 <body>
-    <div class="main-container">
-         <div class="first-child-container">
-             
-               <img class="myPicture" src="/img/mypicture.jpeg" alt="">
-             
-            <div class="container column">
-                <div class="item-1">Item 1</div>
-                <div class="item-2">Item 2</div>
-                <div class="item-3">Item 3</div>
-                <div class="item-4">Item 4</div>
-            </div>
-        </div>
+   <div id="container">
+    <div id="title">Book Crud</div>
 
-         <section class="second-child-container">
-
-         </section>
+    <div id="text-one">
+        Adicione um livro que você já leu
     </div>
-    <link rel="stylesheet" href="/js/script.js">
+ 
+    <div id="container-input">
+        <h1>Nome do livro</h1>
+ 
+        <input type="text" id="inputBook" placeholder="Ex: Biblia">
+ 
+        <button id="toAdd">
+            Adicionar
+        </button>
+    </div>
+
+    <div id="quantityBooks">
+       <span>Você já leu 10 livros</span>
+    </div>
+
+    <div id="booksReadsList">
+
+    </div>
+
+    <footer>
+        Desenvolvido por Luis Fernando & BlackCube, 2021.
+
+        <link rel="stylesheet" href="/js/script.js">
+    </footer>
+   </div>
 </body>
 </html>
