@@ -109,13 +109,23 @@ body{
         .eye{
             color: #f1da03;
         }
+        .eye:hover{
+          
+           color: #a09324;
+        }
 
         .pen{
             color: rgb(3, 68, 245);
         }
+        .pen:hover{
+            color: rgb(52, 79, 151);
+        }
 
         .delete{
             color: rgb(240, 9, 9);
+        }
+        .delete:hover{
+            color: rgb(184, 81, 81);
         }
     }
 }

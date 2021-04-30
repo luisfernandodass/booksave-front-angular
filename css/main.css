@@ -108,12 +108,24 @@ body {
   color: #f1da03;
 }
 
+#booksReadsList .list .eye:hover {
+  color: #a09324;
+}
+
 #booksReadsList .list .pen {
   color: #0344f5;
 }
 
+#booksReadsList .list .pen:hover {
+  color: #344f97;
+}
+
 #booksReadsList .list .delete {
   color: #f00909;
+}
+
+#booksReadsList .list .delete:hover {
+  color: #b85151;
 }
 
 footer {
