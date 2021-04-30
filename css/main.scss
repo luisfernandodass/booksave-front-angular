@@ -54,6 +54,11 @@ body{
         font-size: 1rem;
         font-weight: bold;
     }
+
+    button:hover{
+        background-color:  #399142;
+        transition: all 0.5s ease-in;
+    }
 }
 
 #quantityBooks{
@@ -67,11 +72,52 @@ body{
     margin: 0 auto;
     width: 88%;
     height: 200px;
-
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 
     background: cornsilk;
+
+    ul{
+        margin: auto 10px;
+        padding: 0;
+        margin-left: 0;
+    }
+    .list{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 10px;
+        padding: 1px;
+        padding-left: 7px;
+
+
+        width: 100%;
+        height: 2rem;
+
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+        .actions{
+            width: 35%;
+            text-align: center;
+         }
+
+        i{
+            margin: auto 5px;           
+        }
+
+        .eye{
+            color: #f1da03;
+        }
+
+        .pen{
+            color: rgb(3, 68, 245);
+        }
+
+        .delete{
+            color: rgb(240, 9, 9);
+        }
+    }
 }
 
 footer{

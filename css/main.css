@@ -51,6 +51,12 @@ body {
   font-weight: bold;
 }
 
+#container-input button:hover {
+  background-color: #399142;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
 #quantityBooks {
   text-align: center;
   margin-top: 5%;
@@ -64,6 +70,50 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background: cornsilk;
+}
+
+#booksReadsList ul {
+  margin: auto 10px;
+  padding: 0;
+  margin-left: 0;
+}
+
+#booksReadsList .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  margin-top: 10px;
+  padding: 1px;
+  padding-left: 7px;
+  width: 100%;
+  height: 2rem;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#booksReadsList .list .actions {
+  width: 35%;
+  text-align: center;
+}
+
+#booksReadsList .list i {
+  margin: auto 5px;
+}
+
+#booksReadsList .list .eye {
+  color: #f1da03;
+}
+
+#booksReadsList .list .pen {
+  color: #0344f5;
+}
+
+#booksReadsList .list .delete {
+  color: #f00909;
 }
 
 footer {
