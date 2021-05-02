@@ -1,31 +1,77 @@
+
+
+
+
+
+
+
+
+// Pega o button.
 const button = document.getElementById("toAdd");
 
-const getAllList = document.getElementsByTagName("li");
+// Pega o nome do livro no input.
+let getInput = document.getElementById("inputBook").value;
+
+let getAllList = document.getElementsByClassName("list-js");
+
+// Ativa o button no click
+button.addEventListener("click", function(){
+
+   getAllList[3].textContent = getInput;
+
+  document.getElementById("inputBook").value = '';  
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const button = document.getElementById("toAdd");
+
+let getAllList = document.getElementsByTagName("li")[0];
+
+if(getAllList > 1){
+	getAllList ++;
+}
+
+
+let getInput = document.getElementById("inputBook").value;
+
 
 button.addEventListener("click", function(){
 
-    var getInput = document.getElementById("inputBook").value;
 
-   if ( getInput.length >= 1 ){
+   getAllList.textContent = getInput;
+
+    
+
+})  
+*/
+       
+  
+
+
+
+
+
+
+/*
+ if ( getInput.length >= 1 ){
 
    	 for(var i = 0; i < getAllList.length; i){
                 getAllList[i].textContent = getInput;
             } 
    } 
-
-})  
-       
-        /*
- var list = getAllList[0];
-
-     list.textContent = getInput;   
-        */
-
-        
-       
-
-
-/*
-if(getAllList.length > 0){
-           
 */
