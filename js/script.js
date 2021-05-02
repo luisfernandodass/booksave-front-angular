@@ -12,15 +12,18 @@ const button = document.getElementById("toAdd");
 // Pega o nome do livro no input.
 let getInput = document.getElementById("inputBook").value;
 
-let bookList = document.getElementsByClassName("list-js")[0];
+
 
 // Ativa o button no click
 button.addEventListener("click", function(){
 
-   bookList.textContent = getInput;
+  document.getElementsByClassName("list-js")[0].textContent = getInput;
 
- 
+  document.getElementsByClassName("list-js")[1].textContent = 'Livro II';
 
+  document.getElementsByClassName("list-js")[2].textContent = 'Livro III';
+
+  document.getElementsByClassName("list-js")[3].textContent = 'Livro IV';
 
 })
 
