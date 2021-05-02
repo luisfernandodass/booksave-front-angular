@@ -81,6 +81,10 @@ body{
         margin: auto 10px;
         padding: 0;
         margin-left: 0;
+                  background: #21ce33;
+                  width: 50px;
+                  height: 100px;
+
     }
     .list{
         display: flex;
@@ -91,42 +95,17 @@ body{
         padding-left: 7px;
 
 
-        width: 100%;
+        width: 50%;
         height: 2rem;
 
         border: 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
-        .actions{
-            width: 35%;
-            text-align: center;
-         }
+        
 
-        i{
-            margin: auto 5px;           
-        }
+     
 
-        .eye{
-            color: #f1da03;
-        }
-        .eye:hover{
-          
-           color: #a09324;
-        }
-
-        .pen{
-            color: rgb(3, 68, 245);
-        }
-        .pen:hover{
-            color: rgb(52, 79, 151);
-        }
-
-        .delete{
-            color: rgb(240, 9, 9);
-        }
-        .delete:hover{
-            color: rgb(184, 81, 81);
-        }
+      
     }
 }
 
@@ -136,3 +115,11 @@ footer{
 
     font-size: 10px;
 }
+
+
+/*
+<i class="fas fa-eye eye"></i>
+                        <i class="fas fa-pen-square pen"></i>
+                        <i class="fas fa-minus-circle delete"></i>
+                    </div>
+*/
