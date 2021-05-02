@@ -70,61 +70,103 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background: cornsilk;
-}
 
-#booksReadsList ul {
-  margin: auto 10px;
-  padding: 0;
-  margin-left: 0;
-}
-
-#booksReadsList .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-around;
+}
+
+#booksReadsList ul {
+    width: 65%;
+   padding-left: 10px;
+   height: 200px;
+   margin-top: 0px;
+
+   background: silver;
+}
+
+#booksReadsList .list {
+  
   list-style: none;
-  margin-top: 10px;
-  padding: 1px;
-  padding-left: 7px;
-  width: 100%;
-  height: 2rem;
+ 
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+ 
+  width: 100%;
+
+  height: 3rem;
+  
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+       
+
+          align-items: center;
+          text-align: left;
+  
+  margin-top: 0px;
+
+
 }
 
-#booksReadsList .list .actions {
+#booksReadsList .container-actions{
+  height: 200px;
   width: 35%;
+
+
+
+}
+
+#booksReadsList .container-actions .actions {
+  width: 100%;
   text-align: center;
+
+  margin-top: 0px;
+  height: 3rem;
+
+ display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-around;
+
+          align-items: center;
+
+           border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+
 }
 
-#booksReadsList .list i {
-  margin: auto 5px;
-}
 
-#booksReadsList .list .eye {
+#booksReadsList .eye {
   color: #f1da03;
 }
 
-#booksReadsList .list .eye:hover {
+#booksReadsList .eye:hover {
   color: #a09324;
 }
 
-#booksReadsList .list .pen {
+#booksReadsList .pen {
   color: #0344f5;
 }
 
-#booksReadsList .list .pen:hover {
+#booksReadsList .pen:hover {
   color: #344f97;
 }
 
-#booksReadsList .list .delete {
+#booksReadsList .delete {
   color: #f00909;
 }
 
-#booksReadsList .list .delete:hover {
+#booksReadsList .delete:hover {
   color: #b85151;
 }
 
