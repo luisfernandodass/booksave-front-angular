@@ -17,7 +17,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Imagens
 
-<img src="https://github.com/luisfernandodass/IMAGENS/blob/main/contardiasvividos.img/dayslived01.png"> <img src="https://github.com/luisfernandodass/IMAGENS/blob/main/contardiasvividos.img/dayslived02.png"> 
+<img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookCrud/bookCrud.png">
 
 
 ### Licença
