@@ -57,13 +57,14 @@ body {
   transition: all 0.5s ease-in;
 }
 
-#quantityBooks {
+#container-quantityBooks {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-#booksReadsList {
+
+#container-booksReadsList {
   margin: 0 auto;
   width: 88%;
   height: 200px;
@@ -77,9 +78,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-around;
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
-#booksReadsList ul {
+#container-booksReadsList ul {
     width: 65%;
    padding-left: 0px;
    height: 200px;
@@ -88,7 +92,7 @@ body {
 
 }
 
-#booksReadsList .list {
+#container-booksReadsList .list {
   
   list-style: none;
  
@@ -117,7 +121,7 @@ body {
 
 }
 
-#booksReadsList .container-actions{
+#container-booksReadsList .container-actions{
   height: 200px;
   width: 35%;
 
@@ -125,7 +129,7 @@ body {
 
 }
 
-#booksReadsList .container-actions .actions {
+#container-booksReadsList .container-actions .actions {
   width: 100%;
   text-align: center;
 
@@ -148,27 +152,27 @@ body {
 }
 
 
-#booksReadsList .eye {
+#container-booksReadsList .eye {
   color: #f1da03;
 }
 
-#booksReadsList .eye:hover {
+#container-booksReadsList .eye:hover {
   color: #a09324;
 }
 
-#booksReadsList .pen {
+#container-booksReadsList .pen {
   color: #0344f5;
 }
 
-#booksReadsList .pen:hover {
+#container-booksReadsList .pen:hover {
   color: #344f97;
 }
 
-#booksReadsList .delete {
+#container-booksReadsList .delete {
   color: #f00909;
 }
 
-#booksReadsList .delete:hover {
+#container-booksReadsList .delete:hover {
   color: #b85151;
 }
 
