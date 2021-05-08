@@ -1,40 +1,27 @@
-const button = document.getElementById("toAdd");
+function adicionar(e){
+  let getInput = document.getElementById("inputBook"); // Get the input book name.
 
-// Pega o nome do livro no input.
-let getInput = document.getElementById("inputBook");
-
-let ul = document.getElementById("list-ul");
-
-
-// Ativa o button no click
-button.addEventListener("click", function(){
-
- let li = document.createElement("li");
+  let ul = document.getElementById("list-ul"); // Get the biggest parentNode: ul
+    
+  let li = document.createElement("li");
   li.className = 'list';
 
   li.setAttribute('id', getInput.value);
   li.appendChild(document.createTextNode(getInput.value));
   ul.appendChild(li);
-
-  let element = document.getElementsByTagName("li");
-  
-  for(var i = 5; i > 0; i++){
-  	
-    
-     let containerQuantityBooks = document.getElementById("container-quantityBooks"); 
-   
-      containerQuantityBooks.textContent =  "Você já leu " + i + " livros";             
+}
  
-  }
- 
-
+const add = document.getElementById("toAdd");
+add.addEventListener("click", function(e){
+    adicionar(e);
 })
 
-/*
- if(element){
-    
-     let containerQuantityBooks = document.getElementById("container-quantityBooks"); 
+function excluir(e){
    
-      containerQuantityBooks.textContent =  "Você já leu " + i + " livros";             
-  }
-*/
+}
+
+
+const exclude = document.getElementByClassName('delete');
+exclude.addEventListener("click", function(e){ 
+        excluir(e);
+})   
