@@ -61,16 +61,19 @@ body {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
+ 
 }
 
 
 #container-booksReadsList {
-  margin: 0 auto;
-  width: 88%;
+ 
+  margin-right: 0;
+  padding-right: 0;
+  width: 18rem;
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  background: cornsilk;
+  border-radius: 10px;
+  background: white;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,60 +86,23 @@ body {
   scrollbar-width: thin;
 }
 
-#container-booksReadsList ul {
-    width: 65%;
-   padding-left: 0px;
-   height: 200px;
-   margin-top: 0px;
 
 
-}
 
-#container-booksReadsList .list {
-  
+
+
+#container-booksReadsList  .actions {
+  width: 100px;
   list-style: none;
  
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
- 
-  width: 100%;
+  
 
+  margin-top: 0px;
   height: 3rem;
 
-  padding-left: 5px;
-  
-  
+
+         
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-       
-
-          align-items: center;
-          text-align: left;
-  
-  margin-top: 0px;
-
-
-}
-
-#container-booksReadsList .container-actions{
-  height: 200px;
-  width: 35%;
-
-
-
-}
-
-#container-booksReadsList .container-actions .actions {
-  width: 100%;
-  text-align: center;
-
-  margin-top: 0px;
-  height: 3rem;
-
- display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
@@ -144,10 +110,11 @@ body {
           justify-content: space-around;
 
           align-items: center;
-
-           border: 0;
+          text-align: center;
+   list-style: none;
+ 
+  border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-
 
 }
 
