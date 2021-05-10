@@ -7,13 +7,13 @@ function adicionar(e){
 
   li.className = 'actions';
   
- li.innerHTML = '<i class="fas fa-eye eye"></i> <i class="fas fa-pen-square pen"></i><i class="fas fa-minus-circle delete"></i>'
+ 
  
   
   
   li.setAttribute('id', getInput.value);
   li.appendChild(document.createTextNode(getInput.value));
-  
+  li.innerHTML = '<i class="fas fa-eye eye"></i> <i class="fas fa-pen-square pen"></i><i class="fas fa-minus-circle delete"></i>'
   ul.appendChild(li);
  
 }

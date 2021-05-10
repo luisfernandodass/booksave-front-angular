@@ -67,37 +67,30 @@ body {
 
 #container-booksReadsList {
  
-  margin-right: 0;
-  padding-right: 0;
+ 
+  padding-left: 0px;
+ 
   width: 18rem;
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   background: white;
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-around;
+ 
 
   overflow-y: scroll;
   scrollbar-width: thin;
 }
 
-
-
-
-
-
 #container-booksReadsList  .actions {
-  width: 100px;
-  list-style: none;
+  width: 272px;
+  margin-left: -35px;
+ 
  
   
 
-  margin-top: 0px;
+  
+  
   height: 3rem;
 
 
@@ -113,6 +106,7 @@ body {
           text-align: center;
    list-style: none;
  
+  
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
