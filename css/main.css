@@ -78,11 +78,8 @@ body {
 
   background: white;
 
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+margin-left: 5%;
+  
   
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -141,10 +138,6 @@ footer {
   text-align: center;
   font-size: 10px;
 
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+ margin-top: 3%;
 }
 /*# sourceMappingURL=main.css.map */

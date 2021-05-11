@@ -1,27 +1,3 @@
-/*
-const add = document.getElementById("toAdd");
-add.addEventListener("click", function(e){
-   let getInput = document.getElementById("inputBook"); // Get the input book name.
-
-  let ul = document.getElementById("list-ul"); // Get the biggest parentNode: ul
-    
-  let li = document.createElement("li");
- 
-  li.className = 'actions';
-
-  li.id = 'act';
-  li.innerHTML = '<i class="fas fa-eye eye"></i> '
-  li.innerHTML += '<i class="fas fa-pen-square pen"></i>'
-  li.innerHTML += '<i id="exclude" class="fas fa-minus-circle delete" onclick="exclude()"></i>'
-  
- 
-  li.appendChild(document.createTextNode(getInput.value));
-
-  ul.appendChild(li);
-
-})
-*/
-
 const add = document.getElementById("toAdd");
 add.addEventListener("click", function(e){
 
@@ -34,13 +10,14 @@ add.addEventListener("click", function(e){
   li.className = 'actions';
 
   li.id += 'act';
-  li.textContent = getInput.value;
-  li.innerHTML += '<i class="fas fa-eye eye"></i> '
-  li.innerHTML += '<i class="fas fa-pen-square pen"></i>'
+  li.innerHTML = '<p id="nameBook">' + getInput.value + '</p>';
+  li.innerHTML += '<i class="fas fa-eye eye" onclick="read()"></i> '
+  li.innerHTML += '<i class="fas fa-pen-square pen" onclick="update()"></i>'
   li.innerHTML += '<i id="exclude" class="fas fa-minus-circle delete" onclick="exclude()"></i>'
   
   ul.appendChild(li);
 })
+
 
 function exclude(e){
   
@@ -53,3 +30,15 @@ function exclude(e){
   }
 }
 
+
+function update(e){
+
+  let li = document.getElementById('nameBook');
+
+  li.textContent = "fffff";
+}
+
+function read(e){
+  let li = document.getElementById('nameBook');
+  alert(li.textContent);
+}
