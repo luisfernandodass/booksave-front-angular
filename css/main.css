@@ -68,46 +68,58 @@ body {
 
 
 #container-booksReadsList {
- 
-  padding-top: 0px;
-  padding-left: 0px;
- 
   width: 18rem;
-  height: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-
-  background: white;
-
+height: 200px;
+border: 1px solid rgba(0, 0, 0, 0.5);
+background: white;
 margin-left: 5%;
+overflow-y: scroll;
+scrollbar-width: thin;
+padding-right: .6rem;
+overflow-x: hidden;
+}
+
+
+#container-booksReadsList #list-ul{
+ list-style: none;
+ 
+  height: 3rem;
+ width: 18rem;
+margin-left: -10px;
   
-  
-  overflow-y: scroll;
-  scrollbar-width: thin;
+}
+
+#container-booksReadsList #nameBook{
+   
+   margin-left: -30px;
+  width: 70%;
+
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-left: .5rem;
+  padding-bottom: .5rem;
 }
 
 #container-booksReadsList  .actions {
- 
-  margin-left: -40px;
   
-  height: 3rem;
-         
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-around;
-
-          align-items: center;
-          
-   list-style: none;
- 
-  
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-
+margin-left: 62.5%;
+margin-top: -14.2%;
+width: 27%;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-around;
+align-items: center;
+border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+padding-right: .7rem;
+ padding-bottom: .5rem;
 }
-
 
 #container-booksReadsList .eye {
   color: #f1da03;
