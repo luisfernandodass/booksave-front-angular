@@ -5,7 +5,7 @@ add.addEventListener("click", function(e){
 
   let ul = document.getElementById("list-ul"); // Get the biggest parentNode: ul
     
-  let li = document.createElement("li");
+  let li = document.createElement("tr");
  
   
 
