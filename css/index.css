@@ -14,29 +14,38 @@ body {
   font-family: 'Shadows Into Light', cursive;
   color: white;
   font-size: 3rem;
-  margin-top: 45%;
+  margin-top: 5%;
+  
 }
 
 form{
    width: 18rem;
    display: block;
+   margin-top: 25%;
    margin-right: auto;
    margin-left: auto;
+   
 }
 
 #inputEmail, #inputPassword{
   height: 2rem;
-  width: 18rem;
+  width: 97%;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  
+  margin-top: 1%;
   margin-bottom: 2%;
   border-radius: 5px;
+  padding-left: .5rem;
+}
+
+label{
+  margin-left: 0.8%;
 }
 
 button{
-   height: 2rem;
-  width: 18rem;
   
+   width: 18rem;
+  
+   padding: .6rem;
   
    background: #32CD32;
    color: #ffff;
@@ -44,7 +53,7 @@ button{
 
    display: block;
    margin-right: auto;
-   margin-left: 8%;
+   margin-left: auto;
 
    font-size: 1rem;
    font-weight: bold;

@@ -38,7 +38,7 @@ body {
    width: 17.3rem;
   padding: .6rem;
   border: 1px solid rgba(0, 0, 0, 0.5);
- 
+  border-radius: 5px;
 }
 
 #container-input button {
@@ -50,7 +50,7 @@ body {
   padding: .6rem;
   font-size: 1rem;
   font-weight: bold;
-
+ border-radius: 5px;
 
 }
 
@@ -77,9 +77,10 @@ background: white;
 margin-left: 5%;
 overflow-y: scroll;
 scrollbar-width: thin;
-padding-right: .6rem;
+padding-right: .4rem;
 overflow-x: hidden;
  margin-bottom: 2%;
+  border-radius: 5px;
 }
 
 
@@ -88,7 +89,6 @@ overflow-x: hidden;
  
   height: 3rem;
  width: 18rem;
-margin-left: -10px;
   
 }
 
@@ -104,7 +104,7 @@ margin-left: -10px;
 
 #container-booksReadsList  .actions {
   
-margin-left: 62.5%;
+margin-left: 70%;
 margin-top: -13.4%;
 
 display: -webkit-box;
