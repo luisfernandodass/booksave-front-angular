@@ -5,8 +5,7 @@
 
 body {
   background: #CDAA7D;
-  margin: auto 20px;
-  
+  margin: auto 20px;  
 }
 
 #title {
@@ -14,8 +13,7 @@ body {
   font-family: 'Shadows Into Light', cursive;
   color: white;
   font-size: 3rem;
-  margin-top: 5%;
-  
+  margin-top: 5%; 
 }
 
 form{
@@ -23,8 +21,7 @@ form{
    display: block;
    margin-top: 25%;
    margin-right: auto;
-   margin-left: auto;
-   
+   margin-left: auto; 
 }
 
 #inputEmail, #inputPassword{
@@ -32,17 +29,23 @@ form{
   width: 97%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 1%;
-  margin-bottom: 2%;
+  margin-bottom: -5px;
   border-radius: 5px;
   padding-left: .5rem;
+}
+
+.warning{
+   color: red;
+   font-size: 10px;
+   margin-top: 10%;
+   margin-left: 0.8%;
 }
 
 label{
   margin-left: 0.8%;
 }
 
-button{
-  
+button{ 
    width: 18rem;
   
    padding: .6rem;
@@ -62,8 +65,6 @@ button{
 
     margin-bottom: 5%;
     border-radius: 5px;
-
-
 }
 
 footer { 
