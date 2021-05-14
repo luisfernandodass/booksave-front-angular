@@ -2,7 +2,7 @@ const add = document.getElementById("toAdd");
 add.addEventListener("click", function(e){
 
   let getInput = document.getElementById("inputBook"); // Get the input book name.
-
+container-booksReadsList
   let ul = document.getElementById("list-ul"); // Get the biggest parentNode: ul
     
   let li = document.createElement("tr");
@@ -10,6 +10,7 @@ add.addEventListener("click", function(e){
   
 
   li.id = 'act';
+  
   li.innerHTML = '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
   li.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="read()"></i><i class="fas fa-pen-square pen" onclick="update()"></i><i id="exclude" class="fas fa-minus-circle delete" onclick="exclude()"></i></div> ';
   

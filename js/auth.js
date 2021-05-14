@@ -1,7 +1,7 @@
 var btn = document.getElementById("btn");
 var inputEmail = document.getElementById("inputEmail");
 var inputPassword = document.getElementById("inputPassword");
-
+var errorLogin = document.getElementById("errorLogin");
 
 
 btnLogin.addEventListener('click', function(){
@@ -13,7 +13,8 @@ btnLogin.addEventListener('click', function(){
     var errorCode = error.code;
     var errorMessage = error.message;
 
-    alert("Erro! Tente novamente");
-    // ..
+    errorLogin.textContent = "Sua senha ou e-mail está incorreto! Tente novamente!";
+
   });
 });
+

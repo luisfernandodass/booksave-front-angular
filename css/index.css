@@ -29,16 +29,20 @@ form{
   width: 97%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-top: 1%;
-  margin-bottom: -5px;
+  margin-bottom: 1%;
   border-radius: 5px;
   padding-left: .5rem;
 }
 
-.warning{
+#errorLogin{
    color: red;
-   font-size: 10px;
+   font-size: 12px;
+    width: 18rem;
+   display: block;
    margin-top: 10%;
-   margin-left: 0.8%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
 }
 
 label{
