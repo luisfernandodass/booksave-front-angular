@@ -15,6 +15,7 @@ body {
   color: white;
   font-size: 3rem;
   margin-top: 5%;
+
 }
 
 #text-one {
@@ -26,11 +27,6 @@ body {
   padding: 1rem;
   margin-top: 3%;
   width: 290px;
-}
-
-#container-input h1 {
-  font-size: 15px;
-  margin-bottom: 2%;
 }
 
 #container-input #inputBook {
@@ -55,12 +51,12 @@ body {
 }
 
 #container-input button:hover {
-  background-color: #399142;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  background-color: #399142; 
+  -webkit-transform: scale(0.9);
+    -webkit-transition: all 0.1s ease-in;
 }
 
-#book-reads-text {
+#counter {
   text-align: center;
   display: block;
   margin-top: 5%;
@@ -84,7 +80,7 @@ overflow-x: hidden;
 }
 
 
-#container-booksReadsList #list-ul{
+#container-booksReadsList #containerOfBook{
  list-style: none;
  
   height: 3rem;
@@ -97,8 +93,8 @@ overflow-x: hidden;
   
   
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  padding-left: 1rem;
-  padding-bottom: .5rem;
+  padding-left: .5rem;
+  padding-bottom: .2rem;
   width: 100%;
 }
 
@@ -114,9 +110,6 @@ display: flex;
 -ms-flex-pack: justify;
 justify-content: space-around;
 align-items: center;
-
-
- padding-bottom: .5rem;
 }
 
 #container-booksReadsList .eye {

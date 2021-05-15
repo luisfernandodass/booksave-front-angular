@@ -70,7 +70,11 @@ button{
     margin-bottom: 5%;
     border-radius: 5px;
 }
-
+button:hover{
+  background-color: #399142; 
+  -webkit-transform: scale(0.9);
+    -webkit-transition: all 0.1s ease-in;
+}
 footer { 
   text-align: center;
   font-size: 10px;
