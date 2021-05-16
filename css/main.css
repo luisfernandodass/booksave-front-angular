@@ -15,7 +15,6 @@ body {
   color: white;
   font-size: 3rem;
   margin-top: 5%;
-
 }
 
 #text-one {
@@ -47,13 +46,10 @@ body {
   font-size: 1rem;
   font-weight: bold;
  border-radius: 5px;
-
 }
 
 #container-input button:hover {
   background-color: #399142; 
-  -webkit-transform: scale(0.9);
-    -webkit-transition: all 0.1s ease-in;
 }
 
 #counter {
@@ -63,7 +59,6 @@ body {
   margin-bottom: 2%;
  
 }
-
 
 #container-booksReadsList {
   width: 18rem;
@@ -84,14 +79,11 @@ overflow-x: hidden;
  list-style: none;
  
   height: 3rem;
- width: 18rem;
-  
+  width: 18rem; 
 }
 
 #container-booksReadsList #nameBook{
-   
-  
-  
+  height: .9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-left: .5rem;
   padding-bottom: .2rem;
@@ -99,7 +91,6 @@ overflow-x: hidden;
 }
 
 #container-booksReadsList  .actions {
-  
 margin-left: 70%;
 margin-top: -13.4%;
 
@@ -140,4 +131,3 @@ footer {
   text-align: center;
   font-size: 10px;
 }
-/*# sourceMappingURL=main.css.map */

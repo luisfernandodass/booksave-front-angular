@@ -1,6 +1,6 @@
 var containerOfBook = document.getElementById("containerOfBook");
 var buttonToAdd  = document.getElementById("toAdd");
-
+ var counter = document.getElementById("counter");
 function addBook(e){
   let getInput = document.getElementById("inputBook"); // Get the input book name.
   
@@ -14,8 +14,8 @@ function addBook(e){
 }
 
 function counterBook(){
-  let counter = document.getElementById("counter");
-  let qntdBook = document.getElementsByTagName('tr').length;
+ 
+  var qntdBook = document.getElementsByTagName('tr').length;
   if (qntdBook === 1){
     counter.textContent =  qntdBook + " livro lido";
   } else {
@@ -28,6 +28,9 @@ function removeBook(e){
 
   if(containerOfBook){
     containerOfBook.removeChild(row);
+   
+    var qntdBook = document.getElementsByTagName('tr').length--;
+    counter.textContent =  qntdBook + " livros lidos";
   }
 }
 
