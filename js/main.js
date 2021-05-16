@@ -9,7 +9,7 @@ function addBook(e){
  
   row.id = 'containerRow'; 
   row.innerHTML = '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
-  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye"></i><i id="update" class="fas fa-pen-square pen"></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
+  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="see()"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
   
   containerOfBook.appendChild(row);
 }
@@ -24,13 +24,15 @@ function counterBook(){
   }
 }
 
-function updateBook(){
-  var update  = document.getElementById("update");
-  prompt("opaaaaaa");
-}
+function see(e){
+    let qntdBook = document.getElementById('nameBook');
+    var b =  qntdBook.textContent ;
+    alert(b);
+  }
+
 
 function removeBook(e){
-   let row = document.getElementById('containerRow');  
+  let row = document.getElementById('containerRow');  
 
   if(containerOfBook){
     containerOfBook.removeChild(row);
@@ -45,4 +47,3 @@ function removeBook(e){
 
 buttonToAdd.addEventListener('click', addBook, false);
 buttonToAdd.addEventListener('click', counterBook, false);
-update.addEventListener('click', updateBook, false);
