@@ -10,7 +10,7 @@ function addBook(e){
   
   let row = document.createElement("tr");
  
-  row.id = 'containerRow'; 
+  row.className = 'containerRow'; 
   row.innerHTML = '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="see()"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
   
@@ -28,14 +28,14 @@ function counterBook(){
 }
 
 function see(e){
-    let qntdBook = document.getElementById('nameBook');
-    var b =  qntdBook.textContent ;
-    alert(b);
+    let row = document.querySelector('.containerRow').textContent;  
+  
+    alert(row);
   }
 
 
 function removeBook(e){
-  let row = document.getElementById('containerRow');  
+  let row = document.querySelector('.containerRow');  
 
   if(containerOfBook){
     containerOfBook.removeChild(row);
