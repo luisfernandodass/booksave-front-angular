@@ -1,8 +1,11 @@
 var containerOfBook = document.getElementById("containerOfBook");
+var container = document.getElementById("container-booksReadsList");
 var buttonToAdd  = document.getElementById("toAdd");
 var counter = document.getElementById("counter");
 
+
 function addBook(e){
+  container.className = "container-booksReadsList"
   let getInput = document.getElementById("inputBook"); // Get the input book name.
   
   let row = document.createElement("tr");

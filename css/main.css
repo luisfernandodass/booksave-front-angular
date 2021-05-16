@@ -60,7 +60,7 @@ body {
  
 }
 
-#container-booksReadsList {
+.container-booksReadsList {
   width: 18rem;
 height: 200px;
 border: 1px solid rgba(0, 0, 0, 0.5);
@@ -75,14 +75,14 @@ overflow-x: hidden;
 }
 
 
-#container-booksReadsList #containerOfBook{
+.container-booksReadsList #containerOfBook{
  list-style: none;
  
   height: 3rem;
   width: 18rem; 
 }
 
-#container-booksReadsList #nameBook{
+.container-booksReadsList #nameBook{
   height: .9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-left: .5rem;
@@ -90,7 +90,7 @@ overflow-x: hidden;
   width: 100%;
 }
 
-#container-booksReadsList  .actions {
+.container-booksReadsList  .actions {
 margin-left: 70%;
 margin-top: -13.4%;
 
@@ -103,27 +103,27 @@ justify-content: space-around;
 align-items: center;
 }
 
-#container-booksReadsList .eye {
+.container-booksReadsList .eye {
   color: #f1da03;
 }
 
-#container-booksReadsList .eye:hover {
+.container-booksReadsList .eye:hover {
   color: #a09324;
 }
 
-#container-booksReadsList .pen {
+.container-booksReadsList .pen {
   color: #0344f5;
 }
 
-#container-booksReadsList .pen:hover {
+.container-booksReadsList .pen:hover {
   color: #344f97;
 }
 
-#container-booksReadsList .delete {
+.container-booksReadsList .delete {
   color: #f00909;
 }
 
-#container-booksReadsList .delete:hover {
+.container-booksReadsList .delete:hover {
   color: #b85151;
 }
 
