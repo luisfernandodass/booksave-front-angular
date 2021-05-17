@@ -41,10 +41,14 @@ function removeBook(e){
     containerOfBook.removeChild(row);
    
     let qntdBook = document.getElementsByTagName('tr').length--;
-    counter.textContent =  qntdBook + " livros lidos";
+   
     if(qntdBook === 0){
       counter.textContent =  "";
-    }
+    } else if (qntdBook === 1) {
+       counter.textContent =  qntdBook + " livros lido";
+    } else {
+       counter.textContent =  qntdBook + " livros lidos";
+    }   
   }
 }
 

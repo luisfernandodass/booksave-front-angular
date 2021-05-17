@@ -6,7 +6,6 @@
 body {
   background: #CDAA7D;
   margin: auto 20px;
-  height: 545px;
 }
 
 #title {
@@ -57,7 +56,6 @@ body {
   display: block;
   margin-top: 5%;
   margin-bottom: 2%;
- 
 }
 
 .container-booksReadsList {
@@ -74,7 +72,6 @@ overflow-x: hidden;
   border-radius: 5px;
 }
 
-
 .container-booksReadsList #containerOfBook{
  list-style: none;
  
@@ -83,10 +80,9 @@ overflow-x: hidden;
 }
 
 .container-booksReadsList #nameBook{
-  height: .9rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-left: .5rem;
-  padding-bottom: .6rem;
+  padding-bottom: .3rem;
   width: 100%;
 }
 
