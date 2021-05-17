@@ -1,19 +1,14 @@
-<h1>Book CRUD</h1>
+<h1>Book Save</h1>
 
 <h3>Sobre o projeto</h3>
 
-<p>Book CRUD é um site para você controlar quantos livros já leu.</p>
+<p>Book Save é um site para você controlar quantos livros já leu.</p>
 
-<h4> 
-	Em desenvolvimento...
-</h4>
- 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [JavaScript]
-- [Sass]
 
-<h4>Link do site: https://bookscrud.netlify.app/ :link:</h4> 
+<h4>Link do site: https://booksave.netlify.app/ :link:</h4> 
 
 ### Imagens
 
