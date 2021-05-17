@@ -9,16 +9,14 @@ function addBook(e){
   let getInput = document.getElementById("inputBook"); // Get the input book name.
   
   let row = document.createElement("tr");
- 
-  row.className = 'containerRow'; 
-  row.innerHTML = '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
+  row[getInput];
+  row.className += 'containerRow'; 
+  row.innerHTML += '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="see()"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
   
   containerOfBook.appendChild(row);
-}
-
-function counterBook(){
- 
+  console.log(row);
+  
   let qntdBook = document.getElementsByTagName('tr').length;
   if (qntdBook === 1){
     counter.textContent =  qntdBook + " livro lido";
@@ -26,6 +24,7 @@ function counterBook(){
     counter.textContent =  qntdBook + " livros lidos";
   }
 }
+
 
 function see(e){
     let row = document.querySelector('.containerRow').textContent;  
@@ -40,10 +39,10 @@ function removeBook(e){
   if(containerOfBook){
     containerOfBook.removeChild(row);
    
-    let qntdBook = document.getElementsByTagName('tr').length--;
-   
+    let qntdBook = document.getElementsByTagName('tr').length--;  
     if(qntdBook === 0){
       counter.textContent =  "";
+      container.className = ""
     } else if (qntdBook === 1) {
        counter.textContent =  qntdBook + " livros lido";
     } else {
@@ -53,4 +52,4 @@ function removeBook(e){
 }
 
 buttonToAdd.addEventListener('click', addBook, false);
-buttonToAdd.addEventListener('click', counterBook, false);
+
