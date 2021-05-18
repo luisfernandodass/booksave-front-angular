@@ -10,6 +10,7 @@ function addBook(e){
   
   let row = document.createElement("tr");
   row[getInput];
+  row.setAttribute("id", getInput.value);
   row.className += 'containerRow'; 
   row.innerHTML += '<p id="nameBook" class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="see()"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
@@ -27,6 +28,7 @@ function addBook(e){
 
 
 function see(e){
+
     let row = document.querySelector('.containerRow').textContent;  
   
     alert(row);
