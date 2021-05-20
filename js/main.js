@@ -18,6 +18,7 @@ function addBook(e){
   containerOfBook.appendChild(row); // Adiciona o livro na tabela
  
   
+   // Abaixo a parte de contagem dos livros
   let qntdBook = document.getElementsByTagName('tr').length; // Incrementa a quantidade de livros, conforme o user for adicionando.
   if (qntdBook === 1){
     counter.textContent =  qntdBook + " livro lido";
@@ -31,13 +32,14 @@ function btnRemove(event){
 }
 
 function removeBook(event){
-  var a, b, c, d;
-  a = btnRemove(event);       // Botão delete
-  b = a.parentNode;           // Pega o pai do botão delete (actions)
-  c = b.parentNode;           // Pega o pai do actions (a tag 'tr' || containerRow)
-  d = c.parentNode;           // Pega o pai do containerRow (containerOfBook)
-  d.removeChild(c);
+  var deleteButton, parentButton, grandParentButton, greatGrandFather;
+  deleteButton = btnRemove(event);                       // Botão delete
+  parentButton = deleteButton.parentNode;                // Pega o pai do botão delete (actions)
+  grandParentButton = parentButton.parentNode;     // Pega o pai do actions (a tag 'tr' || a class 'containerRow') - a linha do livro
+  greatGrandFather = grandParentButton.parentNode; // Pega o pai do containerRow (containerOfBook)
+  greatGrandFather.removeChild(grandParentButton);
 
+  // Abaixo a parte de contagem dos livros
   let qntdBook = document.getElementsByTagName('tr').length--;  // Decrementa a quantidade de livros, conforme o user for excluindo.
     if(qntdBook === 0){
       counter.textContent =  ""; // Remove a contagem dos livros.
