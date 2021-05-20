@@ -45,6 +45,7 @@ body {
   font-size: 1rem;
   font-weight: bold;
  border-radius: 5px;
+ box-shadow: 1px 1px 3px black;
 }
 
 #container-input button:hover {
@@ -70,6 +71,7 @@ padding-right: .4rem;
 overflow-x: hidden;
  margin-bottom: 2%;
   border-radius: 5px;
+  padding-top: 1px;
 }
 .containerRow{
   height: 1.3rem;
@@ -91,7 +93,7 @@ overflow-x: hidden;
 
 .container-booksReadsList  .actions {
 margin-left: 70%;
-margin-top: -14.4%;
+margin-top: -11.6%;
 
 display: flex;
 -webkit-box-pack: justify;
@@ -100,7 +102,7 @@ align-items: center;
 width: 5rem;
 
 border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-padding-bottom: .5rem;
+
 }
 
 .container-booksReadsList .eye {
