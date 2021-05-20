@@ -74,7 +74,7 @@ overflow-x: hidden;
   padding-top: 1px;
 }
 .containerRow{
-  height: 2rem;
+  height: 1.5rem;
 
 }
 
@@ -92,7 +92,7 @@ width: 18rem;
 
 display: block;
 margin-top: 20px;
-height: 2rem;
+height: 1.5rem;
 line-height: 30px;
 }
 
@@ -105,7 +105,7 @@ align-items: center;
 
 
 margin-top: -49px;
-height: 2rem;
+height: 1.5rem;
 
 }
 
