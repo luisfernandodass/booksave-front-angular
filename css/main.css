@@ -93,7 +93,7 @@ width: 18rem;
 display: block;
 margin-top: 20px;
 height: 1.5rem;
-line-height: 30px;
+line-height: 10px;
 }
 
 .container-booksReadsList  .actions {
@@ -103,7 +103,7 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 
-
+padding-right: 1rem;
 margin-top: -49px;
 height: 1.5rem;
 
