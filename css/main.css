@@ -75,6 +75,7 @@ overflow-x: hidden;
 }
 .containerRow{
   height: 1.3rem;
+  
 }
 
 .container-booksReadsList #containerOfBook{
@@ -94,7 +95,7 @@ overflow-x: hidden;
 
 .container-booksReadsList  .actions {
 margin-left: 70%;
-margin-top: -11.6%;
+
 
 display: flex;
 -webkit-box-pack: justify;
