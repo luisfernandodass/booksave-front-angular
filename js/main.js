@@ -1,3 +1,4 @@
+
 var containerOfBook = document.getElementById("containerOfBook");
 var container = document.getElementById("container-booksReadsList"); // Container branco
 var buttonToAdd  = document.getElementById("toAdd"); // Botão de adicionar
@@ -12,7 +13,7 @@ function addBook(e){
   row.setAttribute("id", getInput.value);    // Atualizar o valor do ID para o nome do livro.
   row.className += 'containerRow'; 
   row.innerHTML += '<p class="nameBook">' + getInput.value + '</p>';
-  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
+  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook(event)"></i></div> ';
   
   containerOfBook.appendChild(row); // Adiciona o livro na tabela
  
@@ -25,8 +26,26 @@ function addBook(e){
   }
 }
 
-function removeBook(e){
-  let row = document.querySelector('.containerRow');  
+function btnRemove(event){
+  return event.target;
+}
+
+function removeBook(event){
+  var a, b, c, d;
+  a = btnRemove(event);       // Botão delete
+  b = a.parentNode;           // Pega o pai do botão delete (actions)
+  c = b.parentNode;           // Pega o pai do actions (a tag 'tr' || containerRow)
+  d = c.parentNode;           // Pega o pai do containerRow (containerOfBook)
+  d.removeChild(c);
+}
+
+buttonToAdd.addEventListener('click', addBook, false);
+
+
+
+
+/*
+ let row = document.querySelector('.containerRow');  
 
   if(containerOfBook){
     containerOfBook.removeChild(row); // Remove o livro da tabela
@@ -41,7 +60,4 @@ function removeBook(e){
        counter.textContent =  qntdBook + " livros lidos";
     }   
   }
-}
-
-buttonToAdd.addEventListener('click', addBook, false);
-
+*/
