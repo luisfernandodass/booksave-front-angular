@@ -81,7 +81,7 @@ overflow-x: hidden;
 .container-booksReadsList #nameBook{
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-left: .5rem;
-  padding-bottom: .4rem;
+ 
   width: 100%;
 }
 
@@ -89,14 +89,10 @@ overflow-x: hidden;
 margin-left: 70%;
 margin-top: -13.4%;
 
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
 -webkit-box-pack: justify;
--ms-flex-pack: justify;
 justify-content: space-around;
 align-items: center;
-padding-bottom: .4rem;
 }
 
 .container-booksReadsList .eye {
