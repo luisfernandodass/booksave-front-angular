@@ -37,20 +37,8 @@ function removeBook(event){
   c = b.parentNode;           // Pega o pai do actions (a tag 'tr' || containerRow)
   d = c.parentNode;           // Pega o pai do containerRow (containerOfBook)
   d.removeChild(c);
-}
 
-buttonToAdd.addEventListener('click', addBook, false);
-
-
-
-
-/*
- let row = document.querySelector('.containerRow');  
-
-  if(containerOfBook){
-    containerOfBook.removeChild(row); // Remove o livro da tabela
-   
-    let qntdBook = document.getElementsByTagName('tr').length--;  // Decrementa a quantidade de livros, conforme o user for excluindo.
+  let qntdBook = document.getElementsByTagName('tr').length--;  // Decrementa a quantidade de livros, conforme o user for excluindo.
     if(qntdBook === 0){
       counter.textContent =  ""; // Remove a contagem dos livros.
       container.className = ""   // Remove o container branco.
@@ -59,5 +47,6 @@ buttonToAdd.addEventListener('click', addBook, false);
     } else {
        counter.textContent =  qntdBook + " livros lidos";
     }   
-  }
-*/
+}
+
+buttonToAdd.addEventListener('click', addBook, false);
