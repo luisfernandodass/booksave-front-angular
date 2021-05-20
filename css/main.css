@@ -74,8 +74,8 @@ overflow-x: hidden;
   padding-top: 1px;
 }
 .containerRow{
-  height: 1.3rem;
-  
+  height: 2rem;
+
 }
 
 .container-booksReadsList #containerOfBook{
@@ -85,23 +85,27 @@ overflow-x: hidden;
 }
 
 .container-booksReadsList .nameBook{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  padding-left: .5rem;
- 
-  width: 18rem;
- 
-  height: 25px;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+padding-left: .5rem;
+width: 18rem;
+
+
+display: block;
+margin-top: 20px;
+height: 2rem;
+line-height: 30px;
 }
 
 .container-booksReadsList  .actions {
 margin-left: 70%;
-
-
 display: flex;
 -webkit-box-pack: justify;
 justify-content: space-around;
 align-items: center;
-width: 5rem;
+
+
+margin-top: -49px;
+height: 2rem;
 
 }
 
