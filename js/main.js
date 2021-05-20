@@ -11,7 +11,7 @@ function addBook(e){
   let row = document.createElement("tr");    // Cria a linha do livro
   row.setAttribute("id", getInput.value);    // Atualizar o valor do ID para o nome do livro.
   row.className += 'containerRow'; 
-  row.innerHTML += '<p id="nameBook">' + getInput.value + '</p>';
+  row.innerHTML += '<p class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook()"></i></div> ';
   
   containerOfBook.appendChild(row); // Adiciona o livro na tabela

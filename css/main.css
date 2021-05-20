@@ -71,6 +71,9 @@ overflow-x: hidden;
  margin-bottom: 2%;
   border-radius: 5px;
 }
+.containerRow{
+  height: 1.3rem;
+}
 
 .container-booksReadsList #containerOfBook{
  list-style: none;
@@ -78,21 +81,26 @@ overflow-x: hidden;
   width: 18rem; 
 }
 
-.container-booksReadsList #nameBook{
+.container-booksReadsList .nameBook{
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding-left: .5rem;
  
-  width: 100%;
+  width: 12rem;
+  padding-bottom: .3rem;
 }
 
 .container-booksReadsList  .actions {
 margin-left: 70%;
-margin-top: -13.4%;
+margin-top: -14.4%;
 
 display: flex;
 -webkit-box-pack: justify;
 justify-content: space-around;
 align-items: center;
+width: 5rem;
+
+border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+padding-bottom: .5rem;
 }
 
 .container-booksReadsList .eye {
