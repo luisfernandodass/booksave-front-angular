@@ -1,15 +1,14 @@
 
-var containerOfBook = document.getElementById("containerOfBook");
-var container = document.getElementById("container-booksReadsList"); // Container branco
+var containerOfBook = document.getElementById("containerOfBook");  // Container branco
+var container = document.getElementById("container-booksReadsList"); 
 var buttonToAdd  = document.getElementById("toAdd"); // Botão de adicionar
 var counter = document.getElementById("counter");  // Conta a quantidade de livros
 
 function addBook(e){
-  container.className = "container-booksReadsList"
+  container.className = "container-booksReadsList" // Faz aparecer o container branco
   let getInput = document.getElementById("inputBook"); // Pega o nome do livro no input.
   
   let row = document.createElement("tr");    // Cria a linha do livro
-  row.setAttribute("id", getInput.value);    // Atualizar o valor do ID para o nome do livro.
   row.className += 'containerRow'; 
   row.innerHTML += '<p class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="see(event)"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook(event)"></i></div> ';
@@ -25,18 +24,18 @@ function addBook(e){
   }
 }
 
-function nameBook(event){     // Pega o alvo (o elemento onde o livro está)
+function nameBook(event){     // Pega o alvo (o elemento onde o livro está) e é usado nas functions see() & event()
   return event.target;
 }
 
- var actionButton, parentButton, grandParentButton, greatGrandFather; // variaveis usadas nas funções see() e removeBook()
+ var actionButton, parentButton, grandParentButton, greatGrandFather; // Variaveis usadas nas functions see() & removeBook()
 
 // Abaixo acesso o elemento navegando pelo DOM
 function see(event){
-  actionButton = nameBook(event);                        // Botão delete
-  parentButton = actionButton.parentNode;                // Pega o pai do botão delete (actions)
-  grandParentButton = parentButton.parentNode;        // Pega o pai do actions (a tag 'tr' || a class 'containerRow') - a linha do livro
-  greatGrandFather = grandParentButton.firstChild.textContent; // Pega o texto da tag <p> (nome do livro)
+  actionButton = nameBook(event);                                    // Botão delete
+  parentButton = actionButton.parentNode;                            // Pega o pai do botão delete (actions)
+  grandParentButton = parentButton.parentNode;                       // Pega o pai do actions (a tag 'tr' || a class 'containerRow') - a linha do livro
+  greatGrandFather = grandParentButton.firstChild.textContent;       // Pega o texto da tag <p> (nome do livro)
   alert(greatGrandFather);
 }
 
