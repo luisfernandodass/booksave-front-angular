@@ -25,25 +25,25 @@ function addBook(e){
   }
 }
 
-function nameBook(event){
+function nameBook(event){     // Pega o alvo (o elemento onde o livro está)
   return event.target;
 }
 
+ var actionButton, parentButton, grandParentButton, greatGrandFather; // variaveis usadas nas funções see() e removeBook()
+
 // Abaixo acesso o elemento navegando pelo DOM
 function see(event){
-  var deleteButton, parentButton, grandParentButton, greatGrandFather;
-  seeButton = nameBook(event);                        // Botão delete
-  parentButton = seeButton.parentNode;                // Pega o pai do botão delete (actions)
+  actionButton = nameBook(event);                        // Botão delete
+  parentButton = actionButton.parentNode;                // Pega o pai do botão delete (actions)
   grandParentButton = parentButton.parentNode;        // Pega o pai do actions (a tag 'tr' || a class 'containerRow') - a linha do livro
   greatGrandFather = grandParentButton.firstChild.textContent; // Pega o texto da tag <p> (nome do livro)
   alert(greatGrandFather);
 }
 
 // Abaixo acesso o elemento navegando pelo DOM
-function removeBook(event){
-  var deleteButton, parentButton, grandParentButton, greatGrandFather;
-  deleteButton = nameBook(event);                       // Botão delete
-  parentButton = deleteButton.parentNode;                // Pega o pai do botão delete (actions)
+function removeBook(event){ 
+  actionButton = nameBook(event);                       // Botão delete
+  parentButton = actionButton.parentNode;                // Pega o pai do botão delete (actions)
   grandParentButton = parentButton.parentNode;     // Pega o pai do actions (a tag 'tr' || a class 'containerRow') - a linha do livro
   greatGrandFather = grandParentButton.parentNode; // Pega o pai do containerRow (containerOfBook)
   greatGrandFather.removeChild(grandParentButton);
