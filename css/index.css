@@ -1,82 +1,87 @@
-* {
-  color: black;
-  font-family: 'Public Sans', sans-serif;
-}
-
-body {
-  background: #CDAA7D;
-  margin: auto 20px;  
-}
-
-#title {
-  text-align: center;
-  font-family: 'Shadows Into Light', cursive;
+*{
+  margin: 0;
   color: white;
-  font-size: 3rem;
-  margin-top: 5%; 
 }
 
-form{
-   width: 18rem;
-   display: block;
-   margin-top: 25%;
-   margin-right: auto;
-   margin-left: auto; 
+body{
+  background: black;
+  margin: auto 25px;
 }
 
-#inputEmail, #inputPassword{
-  height: 2rem;
-  width: 97%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: 1%;
-  margin-bottom: 1%;
+a{
+  color: white;
+}
+
+h1{
+  font-family: Shadows Into Light;
+}
+
+p{
+  font-family: Nunito;
+}
+
+.nav{
+  border-bottom: 1px solid white;
+  margin-bottom: 5%;
+  height: 55px;
+}
+
+.logo{
+   font-family: Shadows Into Light;
+   margin-right: 50%;
+   font-size: 28px;
+}
+
+.goal{
+  text-align: right;
+  font-family: Nunito;
+  margin-bottom: 5%;
+  width: 67%;
+  margin-left: 0px;
+}
+
+.container-blue-about-me{
+  border: 2px solid #249ED2;
   border-radius: 5px;
-  padding-left: .5rem;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 1px rgba(36, 158, 210, 0.25);
 }
 
-#errorLogin{
-   color: red;
-   font-size: 12px;
-    width: 18rem;
-   display: block;
-   margin-top: 10%;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
+.container-pink-knows{
+  border: 2px solid #F02E5D;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 1px rgba(240, 46, 93, 0.25);
 }
 
-label{
-  margin-left: 0.8%;
+.columns{
+margin-top: -43%;
+margin-bottom: -11.5%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 525px;
 }
 
-button{ 
-   width: 18rem;
-  
-   padding: .6rem;
-  
-   background: #32CD32;
-   color: #ffff;
-   border: 0;
-
-   display: block;
-   margin-right: auto;
-   margin-left: auto;
-
-   font-size: 1rem;
-   font-weight: bold;
-
-    margin-top: 5%;
-
-    margin-bottom: 5%;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px black;
+.column-first{
+background: white;
+width: 25%;
+height: 365px;
+margin-top: -36%;
+margin-right: -35%;
 }
-button:hover{
-  background-color: #399142; 
- 
+
+.column-two{
+background: white;
+width: 25%;
+height: 365px;
+margin-bottom: -36%;
 }
-footer { 
-  text-align: center;
-  font-size: 10px;
+
+.slide-blue{
+  background: #249ED2;
+  color: black;
+  width: 100%;
 }
-/*# sourceMappingURL=main.css.map */
