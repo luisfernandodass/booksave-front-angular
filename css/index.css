@@ -5,11 +5,15 @@
 
 body{
   background: black;
-  margin: auto 25px;
+  margin: auto 40px;
 }
 
-a{
-  color: white;
+.small-socialMedia{
+  color: black;
+  line-height: 45px;
+}
+.small-socialMedia:hover{
+   background: #F02E5D;
 }
 
 h1{
@@ -28,7 +32,7 @@ p{
 
 .logo{
    font-family: Shadows Into Light;
-   margin-right: 50%;
+   margin-right: 30%;
    font-size: 28px;
 }
 
@@ -48,6 +52,10 @@ p{
   box-shadow: 5px 5px 5px 1px rgba(36, 158, 210, 0.25);
 }
 
+.i-have-knows{
+
+}
+
 .container-pink-knows{
   border: 2px solid #F02E5D;
   border-radius: 5px;
@@ -56,32 +64,42 @@ p{
   box-shadow: 5px 5px 5px 1px rgba(240, 46, 93, 0.25);
 }
 
+
 .columns{
-margin-top: -43%;
-margin-bottom: -11.5%;
+margin-top: -8.4%;
 display: flex;
 justify-content: space-around;
 align-items: center;
-height: 525px;
+height: 520px;
+width: 60%;
 }
 
 .column-first{
 background: white;
-width: 25%;
-height: 365px;
-margin-top: -36%;
-margin-right: -35%;
+width: 30%;
+height: 378px;
+margin-top: -70.5%;
+margin-left: -2%;
 }
 
 .column-two{
 background: white;
-width: 25%;
-height: 365px;
-margin-bottom: -36%;
+width: 30%;
+height: 360px;
+margin-bottom: -41%;
+margin-right: -2%;
 }
 
 .slide-blue{
   background: #249ED2;
   color: black;
   width: 100%;
+  padding-left: 5% ;
+}
+
+.container-my-projects{
+  width: 100%;
+  text-align: center;
+  font-family: Shadows Into Light;
+  color: #F02E5D;
 }
