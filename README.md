@@ -10,7 +10,8 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [JavaScript]
+[JavaScript]
+[CSS & HTML]
 
 <h4>Link do site: https://booksave.netlify.app/ :link:</h4> 
 
