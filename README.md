@@ -23,6 +23,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Remover livros
 - [x] Ver livros
 - [x] Contagem de livros
+- [ ] Editar livros
 
 ### Imagens
 
