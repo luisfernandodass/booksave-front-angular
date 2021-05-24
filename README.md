@@ -5,7 +5,7 @@
 <p>Book Save é um site para você controlar quantos livros já leu.</p>
 
 <h4> 
-	🚧  O projeto BookSave foi finalizado em maio de 2021.  🚧
+	🚧  Finalizado em maio de 2021.  🚧
 </h4>
 
 As seguintes ferramentas foram usadas na construção do projeto:
