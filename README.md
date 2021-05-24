@@ -1,8 +1,12 @@
 <h1>Book Save</h1>
 
-<h3>Sobre o projeto</h3>
+<h3>Objetivo</h3>
 
 <p>Book Save é um site para você controlar quantos livros já leu.</p>
+
+<h4> 
+	🚧  O projeto BookSave foi finalizado em maio de 2021.  🚧
+</h4>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -10,9 +14,18 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <h4>Link do site: https://booksave.netlify.app/ :link:</h4> 
 
+### Features
+
+- [x] Tela de login
+- [x] Mensagem caso login errado
+- [x] Cadastrar livros
+- [x] Remover livros
+- [x] Ver livros
+- [x] Contagem de livros
+
 ### Imagens
 
-<img src="https://raw.githubusercontent.com/luisfernandodass/IMAGENS/main/bookCrud/booksave1.png?token=AQAPKKQFBAPUUCDC4TU5ITLAVBMSQ"> <img src="https://raw.githubusercontent.com/luisfernandodass/IMAGENS/main/bookCrud/booksave2.png?token=AQAPKKXF7L6NOW7KC3KOEPDAVBMW2"><img src="https://raw.githubusercontent.com/luisfernandodass/IMAGENS/main/bookCrud/booksave3.png?token=AQAPKKWYIW2EKSNVKHXJVYLAVBMZY">
+<img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave1.png"> <img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave2.png"><img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave3.png">
 
 ### Licença
 <img src="https://img.shields.io/github/license/luisfernandodass/doebrasil"/>
