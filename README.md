@@ -11,7 +11,9 @@
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - JavaScript
-- CSS & HTML
+- CSS
+- HTML
+- Figma
 
 <h4>Link do site: https://booksave.netlify.app/ :link:</h4> 
 
