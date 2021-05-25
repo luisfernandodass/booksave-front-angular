@@ -5,7 +5,6 @@
 
 body{
   background: black;
-  margin: auto 40px;
 }
 
 .small-socialMedia{
@@ -13,10 +12,13 @@ body{
   line-height: 45px;
 }
 .small-socialMedia:hover{
-   background: #F02E5D;
+   background:  #249ED2;
 }
 
 h1{
+  color: #249ED2;
+  width: 100%;
+  text-align: center;
   font-family: Shadows Into Light;
 }
 
@@ -36,70 +38,86 @@ p{
    font-size: 28px;
 }
 
-.goal{
-  text-align: right;
-  font-family: Nunito;
-  margin-bottom: 5%;
-  width: 67%;
-  margin-left: 0px;
-}
-
-.container-blue-about-me{
-  border: 2px solid #249ED2;
-  border-radius: 5px;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 5px 5px 5px 1px rgba(36, 158, 210, 0.25);
-}
-
-.i-have-knows{
-
-}
-
-.container-pink-knows{
-  border: 2px solid #F02E5D;
-  border-radius: 5px;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 5px 5px 5px 1px rgba(240, 46, 93, 0.25);
-}
 
 
-.columns{
-margin-top: -8.4%;
-display: flex;
-justify-content: space-around;
-align-items: center;
-height: 520px;
-width: 60%;
-}
-
-.column-first{
-background: white;
-width: 30%;
-height: 378px;
-margin-top: -70.5%;
-margin-left: -2%;
-}
-
-.column-two{
-background: white;
-width: 30%;
-height: 360px;
-margin-bottom: -41%;
-margin-right: -2%;
-}
-
-.slide-blue{
-  background: #249ED2;
-  color: black;
-  width: 100%;
-  padding-left: 5% ;
-}
-
-.container-my-projects{
-  width: 100%;
+.seek-intern-position{
   text-align: center;
-  font-family: Shadows Into Light;
-  color: #F02E5D;
+  font-family: Nunito;
+  width: 100%;
+  color: white;
+}
+
+.card{
+  width: 50px;
+  height: 100%;
+  background: transparent;
+}
+
+.card-img-top{
+  width: 80%;
+   border-radius: 5px;
+   height: 25rem;
+}
+
+.card-body{
+  padding-left: 0px;
+  width: 80%;
+}
+
+.button-see{
+  background: transparent;
+  border: 1px solid #249ED2;
+  color: white;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.button-see:hover{
+  background: #249ED2;
+  border: 1px solid #249ED2;
+  color: black;
+  border-radius: 5px;
+}
+
+.about-me-text{
+  width: 100%;
+}
+
+.about-me-container{
+  background:  #249ED2;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3rem;
+  height: 300px;
+}
+
+.my-img{
+  border-radius: 100px;
+  width: 150px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.courses-title{
+  color: white;
+}
+
+.container-courses{
+  background:  transparent;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3rem;
+  height: 300px;
+}
+
+
+.container-links{
+  background:  #249ED2;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3rem;
+  height: 300px;
 }
