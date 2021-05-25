@@ -8,15 +8,14 @@ body{
 }
 
 .small-socialMedia{
-  color: black;
   line-height: 45px;
 }
 .small-socialMedia:hover{
-   background:  #249ED2;
+   color:  #249ED2;
 }
 
 h1{
-  color: #249ED2;
+  color: white;
   width: 100%;
   text-align: center;
   font-family: Shadows Into Light;
@@ -47,10 +46,16 @@ p{
   color: white;
 }
 
+.title-myProjects{
+  color: #249ED2;
+
+}
+
 .card{
   width: 50px;
   height: 100%;
   background: transparent;
+  color: #249ED2;
 }
 
 .card-img-top{
@@ -79,8 +84,9 @@ p{
   border-radius: 5px;
 }
 
-.about-me-text{
-  width: 100%;
+.title-aboutMe{
+  
+  color: #249ED2;
 }
 
 .about-me-container{
@@ -89,14 +95,15 @@ p{
   width: 100%;
   border-radius: 5px;
   padding: 3rem;
-  height: 300px;
+  
 }
 
 .my-img{
   border-radius: 100px;
   width: 150px;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 15%;
+  box-shadow: 1px 1px 4px black;
 }
 
 .courses-title{
@@ -109,15 +116,27 @@ p{
   width: 100%;
   border-radius: 5px;
   padding: 3rem;
-  height: 300px;
+  
 }
 
 
-.container-links{
+footer{
   background:  #249ED2;
   color: white;
   width: 100%;
   border-radius: 5px;
-  padding: 3rem;
-  height: 300px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  
+}
+
+.big-socialMedia{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 3rem;
+}
+
+.big-socialMedia:hover{
+  color: black;
 }
