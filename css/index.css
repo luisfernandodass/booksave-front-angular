@@ -13,13 +13,13 @@ body {
   font-family: 'Shadows Into Light', cursive;
   color: white;
   font-size: 3rem;
-  margin-top: 5%; 
+  margin-top: 5%;
 }
 
 form{
    width: 18rem;
    display: block;
-   margin-top: 25%;
+   
    margin-right: auto;
    margin-left: auto; 
 }
