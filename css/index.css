@@ -36,8 +36,9 @@ form{
 
 #errorLogin{
    color: red;
-   font-size: 12px;
-    width: 18rem;
+   font-size: 15px;
+   font-weight: 700;
+  
    display: block;
    margin-top: 10%;
    margin-left: auto;
