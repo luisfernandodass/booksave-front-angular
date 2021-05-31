@@ -38,14 +38,14 @@ function addBook(e){
   let row = document.createElement("tr");    // Cria a linha do livro
   row.className += 'containerRow'; 
   row.innerHTML += '<p class="nameBook">' + getInput.value + '</p>';
-  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="getBook(event)"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook(event)"></i></div> ';
+  row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="seeBook(event)"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook(event)"></i></div> ';
   
   containerOfBook.appendChild(row); // Adiciona o livro na tabela
  
   increaseQuantityOfBooks();
 }
 
-function getBook(event){
+function seeBook(event){
   getRowOfBook(event);
   greatGrandFather = grandParentButton.firstChild.textContent;       // Pega o texto da tag <p> (nome do livro)
   alert(greatGrandFather);
