@@ -1,8 +1,8 @@
 const containerOfBook = document.getElementById("containerOfBook");  // Container branco
 const container = document.getElementById("container-booksReadsList"); 
-var counter = document.getElementById("counter");  // Conta a quantidade de livros
-var targetButton, parentButton, grandParentButton, greatGrandFather;
-var arr = [];
+let counter = document.getElementById("counter");  // Conta a quantidade de livros
+let targetButton, parentButton, grandParentButton, greatGrandFather;
+const arr = [];
 
 function increaseQuantityOfBooks(){
   let qntdBook = document.getElementsByTagName('tr').length; // Incrementa a quantidade de livros, conforme o user for adicionando.
@@ -40,9 +40,11 @@ function addBook(event){
   row.innerHTML += '<p class="nameBook">' + getInput.value + '</p>';
   row.innerHTML += '<div class="actions"><i class="fas fa-eye eye" onclick="seeBook(event)"></i><i class="fas fa-pen-square pen" ></i><i class="fas fa-minus-circle delete" onclick="removeBook(event)"></i></div> ';
   
+  arr.push(row.textContent); // Adiciona o livro no array
+  localStorage.setItem('Livro', JSON.stringify(arr)); // Adiciona o livro no localStorage, dentro do Array
+
   containerOfBook.appendChild(row); // Adiciona o livro na tabela
   
-  arr.push(row.textContent); // Adiciona o livro no array
   console.log(arr);
 
   increaseQuantityOfBooks();
@@ -60,8 +62,6 @@ function removeBook(event){
   greatGrandFather.removeChild(grandParentButton);
 
   localStorage.removeItem('book');
-
-  console.log(arr);
 
   decreaseQuantityOfBooks();
 }
