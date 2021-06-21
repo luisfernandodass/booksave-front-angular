@@ -28,8 +28,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [ ] Editar livros
 
 ### Imagens
-
-<img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave1.png"> <img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave2.png"><img src="https://github.com/luisfernandodass/IMAGENS/blob/main/bookSave/booksave3.png">
+![image](https://user-images.githubusercontent.com/67171626/122770851-3f04f800-d27c-11eb-8acc-9eaf67a8da9b.png)
+![image](https://user-images.githubusercontent.com/67171626/122770894-4af0ba00-d27c-11eb-8cca-80f62367ed25.png)
+![image](https://user-images.githubusercontent.com/67171626/122770932-5348f500-d27c-11eb-88d5-61f104fc4431.png)
 
 ### Licença
 <img src="https://img.shields.io/github/license/luisfernandodass/doebrasil"/>
