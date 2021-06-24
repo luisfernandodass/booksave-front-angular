@@ -15,7 +15,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - HTML
 - Figma
 
-<h4>Link do site: https://booksave.netlify.app/ :link:</h4> 
+<h4>Link do site: https://booksave.netlify.app/main.html :link:</h4> 
 
 ### Features
 
