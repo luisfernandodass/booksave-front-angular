@@ -10,7 +10,7 @@ Access the website: https://booksave.netlify.app/main.html
  
 ## Tools
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in this project:
 
 - JavaScript
 - CSS
