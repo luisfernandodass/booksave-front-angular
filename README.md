@@ -1,4 +1,4 @@
-# Doe Brasil
+# Book Save
 
 ## Objective
 
@@ -15,6 +15,7 @@ The following tools were used in this project:
 - JavaScript
 - CSS
 - HTML
+- Firebase
 - Figma
 
 ## Features
