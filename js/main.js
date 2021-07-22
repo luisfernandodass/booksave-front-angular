@@ -1,6 +1,6 @@
-const containerOfBook = document.getElementById("containerOfBook");  // Container branco
-const container = document.getElementById("container-booksReadsList"); 
-let counter = document.getElementById("counter");  // Conta a quantidade de livros
+const containerOfBook = document.querySelector(".containerOfBook");  // Container branco
+const container = document.querySelector(".container-booksReadsList"); 
+let counter = document.querySelector(".counter");  // Conta a quantidade de livros
 let targetButton, parentButton, grandParentButton, greatGrandFather;
 const arr = [];
 
@@ -33,7 +33,7 @@ function getRowOfBook(event){
 
 function addBook(event){
   container.className = "container-booksReadsList" // Faz aparecer o container branco
-  let getInput = document.getElementById("inputBook"); // Pega o nome do livro no input. 
+  let getInput = document.querySelector(".inputBook"); // Pega o nome do livro no input. 
   let row = document.createElement("tr"); // Cria a linha do livro
 
   row.className += 'containerRow'; 
@@ -42,11 +42,8 @@ function addBook(event){
   
   arr.push(row.textContent); // Adiciona o livro no array
   localStorage.setItem('Livro', JSON.stringify(arr)); // Adiciona o livro no localStorage, dentro do Array
-
   containerOfBook.appendChild(row); // Adiciona o livro na tabela
-  
   console.log(arr);
-
   increaseQuantityOfBooks();
 }
 
@@ -60,8 +57,6 @@ function removeBook(event){
   getRowOfBook(event);
   greatGrandFather = grandParentButton.parentNode; // Pega o pai do containerRow (containerOfBook)
   greatGrandFather.removeChild(grandParentButton);
-
   localStorage.removeItem('book');
-
   decreaseQuantityOfBooks();
 }

@@ -1,10 +1,10 @@
-var btn = document.getElementById("btn");
-var inputEmail = document.getElementById("inputEmail");
-var inputPassword = document.getElementById("inputPassword");
-var errorLogin = document.getElementById("errorLogin");
+var btn = document.querySelector(".btnLogin");
+var inputEmail = document.querySelector(".inputEmail");
+var inputPassword = document.querySelector(".inputPassword");
+var errorLogin = document.querySelector(".errorLogin");
 
 
-btnLogin.addEventListener('click', function(){
+btn.addEventListener('click', function(){
 
   firebase.auth().signInWithEmailAndPassword(inputEmail.value, inputPassword.value).then(function(result){
       window.location.replace('main.html')
