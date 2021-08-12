@@ -35,7 +35,7 @@ The following tools were used in this project:
 ![image](https://user-images.githubusercontent.com/67171626/122770932-5348f500-d27c-11eb-88d5-61f104fc4431.png)
 
 ## License
-<img src="https://img.shields.io/github/license/luisfernandodass/doebrasil"/>
+<img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>
 
 ## Author
 
