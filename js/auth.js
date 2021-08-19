@@ -7,7 +7,7 @@ var errorLogin = document.querySelector(".errorLogin");
 btn.addEventListener('click', function(){
 
   firebase.auth().signInWithEmailAndPassword(inputEmail.value, inputPassword.value).then(function(result){
-      window.location.replace('main.html')
+      window.location.replace('save-book.html')
   })
   .catch(function (error) {
     var errorCode = error.code;

@@ -5,28 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;700&family=Shadows+Into+Light&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Book Save</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css"/>
+    <title>Book Save - Login</title>
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <div class="title">Book Save</div>
-
-        <form>
+        <form class="container">
             <span class="errorLogin"></span>
             <br>
-            <label>E-mail</label>
-            <input type="email" class="inputEmail" placeholder="E-mail">
+            <label for="inputEmail">E-mail</label>
+            <input type="email" class="inputEmail inputTxt" name="inputEmail" placeholder="booksave@gmail.com">
             <label>Senha</label>
-            <input type="password" class="inputPassword" placeholder="Senha">
-            <button type="button" class="btnLogin">Entrar</button>
+            <input type="password" class="inputPassword inputTxt" placeholder="********">
+            <button type="button" class="btnLogin btn">Entrar</button>
         </form>
-
         <footer>Desenvolvido por Luis Fernando, 2021.</footer>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
