@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;700&family=Shadows+Into+Light&display=swap');
+
+body {
+    background: #303a42;
+    margin: auto;
+    width: 300px;
+}
+
+.title {
+    text-align: center;
+    font-family: "Shadows Into Light", cursive;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5%;
+}
+
+.inputTxt{
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: .2rem;
+  border-radius: 5px;
+  padding: .7rem;
+  font-size: .8rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+}
+
+.btn{
+    width: 100%;
+    padding: 0.6rem;
+    background: #329ccd;
+    color: #ffff;
+    border: 0;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    font-family: "Public Sans", sans-serif;
+}
+
+.btn:hover {
+    background: rgba(50, 156, 205, .8);  
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 1rem;
+    color: #fff;
+    font-family: "Public Sans", sans-serif;
+}
