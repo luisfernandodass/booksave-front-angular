@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyBcY1V3VBsyHGNsf4-TpOYr9ArQckZKC50",
     authDomain: "book-save.firebaseapp.com",
     projectId: "book-save",
@@ -11,4 +11,4 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  
+

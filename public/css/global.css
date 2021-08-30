@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;700&family=Shadows+Into+Light&display=swap');
 
 body {
-    background: #303a42;
     margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #303a42;
+}
+
+.box{
     width: 300px;
+    background: #303a42;
 }
 
 .title {
     text-align: center;
     font-family: "Shadows Into Light", cursive;
-    color: white;
+    color: #fff;
     font-size: 3rem;
-    margin-top: 5%;
 }
 
 .inputTxt{
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  margin-top: .2rem;
   border-radius: 5px;
   padding: .7rem;
   font-size: .8rem;
@@ -27,16 +33,15 @@ body {
 .btn{
     width: 100%;
     padding: 0.6rem;
-    background: #329ccd;
-    color: #ffff;
+    background: rgb(50, 156, 205);
+    color: #fff;
     border: 0;
     display: block;
     font-size: 1rem;
     font-weight: bold;
     margin-top: .2rem;
-    margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, .3);
     cursor: pointer;
     font-family: "Public Sans", sans-serif;
 }
@@ -51,4 +56,18 @@ footer {
     margin-top: 1rem;
     color: #fff;
     font-family: "Public Sans", sans-serif;
+}
+
+@media screen and (min-width: 700px){
+    .box{
+        background: #303a42;
+        box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        padding: 0rem 2rem 5rem 2rem;
+        height: 630px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
 }
