@@ -20,13 +20,14 @@ The following tools were used in this project:
 
 ## Features
 
-- [x] Login screen
+- [x] Login screen/ Authetication with e-mail and password
 - [x] Message if login wrong
 - [x] Register books
 - [x] Remove books
 - [x] See books
 - [x] Book count
 - [ ] Edit books
+- [ ] Localstorage
 
 ## Images
 
