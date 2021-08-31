@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="/public/css/global.css">
-    <link rel="stylesheet" href="/public/css/save-book.css"/>
+    <link rel="stylesheet" href="/public/css/main.css"/>
     <title>Book Save</title>
 </head>
 
@@ -17,15 +17,16 @@
         <div class="description">Adicione um livro que você já leu</div>
         <form class="container-input">
             <input type="text" class="inputBook inputTxt" placeholder="Ex: Biblia">
-            <button type="button" class="toAdd btn">Adicionar</button>
+            <button type="submit" class="toAdd btn">Adicionar</button>
         </form>
         <span class="counter"></span>
-        <div class="containerBooks">
+        <div class="container-books">
             <table class="table"></table>
         </div>
         <footer><p>Desenvolvido por Luis Fernando, 2021.</p></footer>
     </div>
-    <script type="module" src="/public/js/modules.js"></script>
+    <script type="module" src="/public/js/add-book.js"></script>
+    <script type="module" src="/public/js/localstorage.js"></script>
 </body>
 
 </html>

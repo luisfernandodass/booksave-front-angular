@@ -6,7 +6,7 @@ Book Save is a website for you to control how many and which books you've alread
 
 ## Host
 
-Access the website: https://booksave.netlify.app/save-book.html
+Access the website: https://booksave.netlify.app/main.html
  
 ## Tools
 
@@ -30,7 +30,7 @@ The following tools were used in this project:
 
 ## Images
 
-![booksave netlify app_index html](https://user-images.githubusercontent.com/67171626/130332967-0d2c9b8c-3ae8-4aa5-adc3-6da395361779.png)![booksave netlify app_save-book html](https://user-images.githubusercontent.com/67171626/130332974-d39c2c3b-d3e5-4147-96ee-33ef67055c40.png)
+![booksave netlify app_index html](https://user-images.githubusercontent.com/67171626/130332967-0d2c9b8c-3ae8-4aa5-adc3-6da395361779.png)![booksave netlify app_main html](https://user-images.githubusercontent.com/67171626/130332974-d39c2c3b-d3e5-4147-96ee-33ef67055c40.png)
 
 ## License
 <img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>

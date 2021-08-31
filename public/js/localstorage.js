@@ -1,7 +1,12 @@
-export { saveBookInStorage, setBookInStorage}
+export { saveBookInStorage, removeBookInStorage, setBookInStorage }
 
-function saveBookInStorage(a) {
-  localStorage.setItem(a.textContent, a);
+function saveBookInStorage(row) {
+  localStorage.setItem(row.textContent, row);
+}
+
+function removeBookInStorage(e) {
+  const row = e.target.parentNode.parentNode;
+  localStorage.removeItem(row.textContent);
 }
 
 function setBookInStorage() {

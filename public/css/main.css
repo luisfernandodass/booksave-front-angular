@@ -76,7 +76,8 @@
   color: #b85151;
 }
 
-.containerBooks {
+.container-books {
+  display: none;
   width: 18rem;
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -91,16 +92,26 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.containerBooks::-webkit-scrollbar {
+.container-books::-webkit-scrollbar {
   width: 1.1rem;
 }
 
-.containerBooks::-webkit-scrollbar-thumb {
+.container-books::-webkit-scrollbar-thumb {
   background: #fff;
   border: 6px solid #329ccd;
   border-radius: 5rem;
 }
 
-.containerBooks::-webkit-scrollbar-track {
+.container-books::-webkit-scrollbar-track {
   background: #329ccd;
+}
+
+@media screen and (min-width: 700px){
+ 
+.counter {
+  position: absolute;
+  margin-bottom:-.5rem;
+  font-family: "Public Sans", sans-serif;
+  color: #fff;
+}
 }
