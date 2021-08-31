@@ -6,7 +6,7 @@ Book Save is a website for you to control how many and which books you've alread
 
 ## Host
 
-Access the website: https://booksave.netlify.app/main.html
+Access the website: https://booksave.netlify.app/public/save-book.html
  
 ## Tools
 
