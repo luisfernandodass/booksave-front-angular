@@ -1,8 +1,6 @@
 # Book Save
 
-## Objective
-
-Book Save is a website for you to control how many and which books you've already read.
+Book Save is a WebApp for you to control how many and which books you've already read.
 
 ## Host
 
@@ -31,7 +29,8 @@ The following tools were used in this project:
 
 ## Images
 
-![booksave netlify app_index html](https://user-images.githubusercontent.com/67171626/130332967-0d2c9b8c-3ae8-4aa5-adc3-6da395361779.png)![booksave netlify app_main html](https://user-images.githubusercontent.com/67171626/130332974-d39c2c3b-d3e5-4147-96ee-33ef67055c40.png)
+<img src="https://user-images.githubusercontent.com/67171626/130332967-0d2c9b8c-3ae8-4aa5-adc3-6da395361779.png" width="360px" height="420px"/>
+<img src="https://user-images.githubusercontent.com/67171626/130332974-d39c2c3b-d3e5-4147-96ee-33ef67055c40.png" width="360px" height="420px"/>
 
 ## License
 <img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>
