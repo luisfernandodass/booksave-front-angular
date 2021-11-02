@@ -1,15 +1,28 @@
-export { saveBookInStorage, removeBookInStorage, setBookInStorage }
+export { saveBookInStorage, removeBookInStorage };
+let arrayStorage = new Array();
 
 function saveBookInStorage(row) {
-  localStorage.setItem(row.textContent, row);
+  arrayStorage.push(row.outerHTML);
+  localStorage.setItem("Book", JSON.stringify(arrayStorage));
 }
 
-function removeBookInStorage(e) {
-  const row = e.target.parentNode.parentNode;
-  localStorage.removeItem(row.textContent);
+function removeBookInStorage(row) {
+  arrayStorage.pop()
+  localStorage.setItem("Book", JSON.stringify(arrayStorage));
 }
 
-function setBookInStorage() {
+/**
+ * 
+ * function removeBookInStorage(row) {
+  arrayStorage.pop(row);
+  localStorage.setItem("Book", JSON.stringify(arrayStorage));
+  console.log(arrayStorage);
+}
+ */
+
+/**
+ * 
+ * function setBookInStorage() {
   const nameBooks = Object.keys(localStorage);
   const saveContainer = nameBooks.filter(
     (container) => container === "Container"
@@ -20,3 +33,5 @@ function setBookInStorage() {
     btnAddBook.elements[nameBook].value = localStorage[nameBook];
   });
 }
+
+ */

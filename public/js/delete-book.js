@@ -1,5 +1,5 @@
 import { counterDecrease } from "./counter-book.js";
-import {  removeBookInStorage, setBookInStorage } from "./localstorage.js"
+import { removeBookInStorage,} from "./localstorage.js"
 
 export default function deleteBook() {
     const table = document.querySelector(".table"); // Container branco
@@ -8,8 +8,7 @@ export default function deleteBook() {
       btn.addEventListener("click", (e) => {
         table.removeChild(e.target.parentNode.parentNode);
         counterDecrease();
-        containerBooks.style.display= "none"
-        removeBookInStorage(e);
+        removeBookInStorage(e.target.parentNode.parentNode);
       });
     });
   }

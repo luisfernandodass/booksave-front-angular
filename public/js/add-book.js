@@ -1,11 +1,10 @@
 import { counterIncrease } from "./counter-book.js";
 import seeBook from "./see-book.js";
 import deleteBook from "./delete-book.js";
-import { saveBookInStorage, setBookInStorage } from "./localstorage.js"
+import { saveBookInStorage,  } from "./localstorage.js"
 
 function addBook() {
   const btnAddBook = document.querySelector(".toAdd");
-  
   btnAddBook.addEventListener("click", (e) => {
     e.preventDefault();
     const table = document.querySelector(".table");
@@ -24,12 +23,14 @@ function addBook() {
     <i class="fas fa-minus-circle delete"></i>
     `;
     row.innerHTML += `${p.outerHTML} ${spanActions.outerHTML}`;
-    
+
+  
+
     table.appendChild(row);
     counterIncrease();
     seeBook();
     deleteBook();
-    saveBookInStorage(row);
+    saveBookInStorage(row)
   });
 }
 addBook();
