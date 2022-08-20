@@ -37,3 +37,13 @@ function addBook() {
   });
 }
 addBook();
+
+
+function createAndShowElement() {
+  const body = document.querySelector('body');
+  const container = document.querySelector('.box');
+
+  body.appendChild(container);
+}
+
+createAndShowElement();
