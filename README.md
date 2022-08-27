@@ -1,7 +1,7 @@
 # Book Save
 
-### Endpoint do site BucketS3: http://booksave-vanilla-js.s3-website-us-east-1.amazonaws.com/ 
-### Endpoint do site Netlify: https://booksave.netlify.app/public/save-book.html
+### Endpoint do site no BucketS3: http://booksave-vanilla-js.s3-website-us-east-1.amazonaws.com/ 
+### Endpoint do site no Netlify: https://booksave.netlify.app/public/save-book.html
 
 ## Features
 
