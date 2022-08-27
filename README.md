@@ -1,20 +1,6 @@
 # Book Save
 
-Book Save is a WebApp for you to control how many and which books you've already read.
-
-## Host
-
-Access the website: https://booksave.netlify.app/public/save-book.html
- 
-## Tools
-
-The following tools were used in this project:
-
-- JavaScript
-- CSS
-- HTML
-- Firebase
-- Figma
+## Endpoint do site: http://booksave-vanilla-js.s3-website-us-east-1.amazonaws.com/ ou https://booksave.netlify.app/public/save-book.html
 
 ## Features
 
@@ -27,7 +13,7 @@ The following tools were used in this project:
 - [ ] Edit books
 - [ ] Localstorage
 
-## Images
+## Print do site
 
 <img src="https://user-images.githubusercontent.com/67171626/132972494-3e8ce87c-32a3-476c-90be-883fc932254d.png" width="360px" height="420px"/> <img src="https://user-images.githubusercontent.com/67171626/130332974-d39c2c3b-d3e5-4147-96ee-33ef67055c40.png" width="360px" height="420px"/>
 
@@ -40,7 +26,7 @@ The following tools were used in this project:
  
  <b>Luis Fernando</b>
   
-👋🏽 Contact me!
+👋🏽 Entre em contato comigo pelos links abaixo!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Luis-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luisfernando/)](https://www.linkedin.com/in/luisfernando/) 
 [![Gmail Badge](https://img.shields.io/badge/-luisfernandodass@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luisfernandodass@gmail.com)](mailto:luisfernandodass@gmail.com)
