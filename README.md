@@ -1,6 +1,7 @@
 # Book Save
 
-## Endpoint do site: http://booksave-vanilla-js.s3-website-us-east-1.amazonaws.com/ ou https://booksave.netlify.app/public/save-book.html
+### Endpoint do site BucketS3: http://booksave-vanilla-js.s3-website-us-east-1.amazonaws.com/ 
+### Endpoint do site Netlify: https://booksave.netlify.app/public/save-book.html
 
 ## Features
 
@@ -20,7 +21,7 @@
 ## License
 <img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>
 
-## Author
+## Desenvolvido por
 
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/67171626?s=460&u=609fc063322b859752a5675bd4e17657e650a389&v=4" width="100px;" alt=""/>
  
