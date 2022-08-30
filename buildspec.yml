@@ -1,0 +1,18 @@
+version: 0.2
+    
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+      runtime: version
+    commands: 
+  build:
+    commands:
+      - cd app/
+      - npm run build
+artifacts:
+  files:
+    - '**/*'
+cache:
+  paths:
+    - 'node_modules/**/*'
