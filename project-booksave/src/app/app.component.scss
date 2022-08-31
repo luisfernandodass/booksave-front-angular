@@ -1,16 +1,19 @@
 
 mat-card {
-  min-width: 320px;
+  min-width: 430px;
   min-height: 360px;
+  max-height: 360px;
   align-self: center;
   display: flex;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background: #1E293B;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
   align-items: center;
   display: flex;
   flex-direction: column;
+
+  overflow-y: scroll;
 
   mat-card-title {
     display: flex;
