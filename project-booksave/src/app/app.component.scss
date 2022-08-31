@@ -1,0 +1,36 @@
+
+mat-card {
+  min-width: 320px;
+  min-height: 360px;
+  align-self: center;
+  display: flex;
+  padding: 2rem;
+  background: #1E293B;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  mat-card-title {
+    display: flex;
+    align-self: flex-start;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+  mat-form-field {
+    color: #fff;
+  }
+
+  button {
+    background: #4a39b3;
+    color: #fff;
+  }
+}
