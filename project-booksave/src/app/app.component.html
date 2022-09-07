@@ -1,7 +1,5 @@
-<form class="book-form">
-  <mat-form-field class="example-full-width" appearance="fill" [formGroup]="form">
-    <textarea matInput placeholder="Ex. A Marca da Vitória" id="book" formControlName="book"></textarea>
-  </mat-form-field>
+<form class="book-form" [formGroup]="form">
+  <input placeholder="Ex. A Marca da Vitória" id="book" formControlName="book"/>
 
   <button mat-raised-button color="primary" type="button" (click)="form.get('book')?.value !== '' ? addBook() : ''">
     adicionar livro

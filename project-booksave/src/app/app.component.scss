@@ -1,12 +1,36 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+  input {
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: .5px solid #fff;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
+  }
+
+  input::placeholder {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.808);
+  }
+
+  button {
+    background: #4a39b3;
+    color: #fff;
+    height: 48px;
+  }
+}
 
 mat-card {
-  min-width: 430px;
   min-height: 360px;
   max-height: 360px;
   align-self: center;
   display: flex;
   padding: 2rem 1rem;
-  background: #1E293B;
+  background: #161B22;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 
   align-items: center;
@@ -21,19 +45,8 @@ mat-card {
     color: #fff;
     font-size: 12px;
   }
-}
 
-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-
-  mat-form-field {
-    color: #fff;
-  }
-
-  button {
-    background: #4a39b3;
-    color: #fff;
+  app-row-book {
+    width: 100%;
   }
 }

@@ -1,12 +1,12 @@
 mat-card {
-  color: #fff;
+  color: #0D1117;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.45);
   margin: .7rem 0;
   padding: 1rem;
-  width: 360px;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .actions-crud {
     display: flex;
