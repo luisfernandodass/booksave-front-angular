@@ -1,15 +1,1 @@
-<form class="book-form" [formGroup]="form">
-  <input placeholder="Ex. A Marca da Vitória" id="book" formControlName="book"/>
-
-  <button mat-raised-button color="primary" type="button" (click)="form.get('book')?.value !== '' ? addBook() : ''">
-    adicionar livro
-  </button>
-</form>
-
-<mat-card>
-  <mat-card-title>
-    qntd. de livros lidos:  <b>{{ books.length}}</b>
-  </mat-card-title>
-
-  <app-row-book *ngFor="let book of books" [book]="book"></app-row-book>
-</mat-card>
+<router-outlet></router-outlet>
