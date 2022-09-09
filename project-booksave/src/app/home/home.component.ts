@@ -6,7 +6,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   books: string[] = [];
 
@@ -16,9 +16,22 @@ export class HomeComponent {
 
   book = new FormControl('');
 
+  ngOnInit() {
+    this.getBookInLocalStorage();
+  }
+
   public addBook(): void {
-    this.books.push(this.form.get('book')?.value);
-    console.log(this.books)
+    const book = this.form.get('book')?.value;
+    this.books.push(book);
+    localStorage.setItem(`${book}`, book);
+  }
+
+  private getBookInLocalStorage(): void {
+    if (localStorage.length === 0) { return; }
+
+    for (let i = 0; i < localStorage.length; i++){
+      this.books.push(localStorage.key(i) as string);
+    }
   }
 
 }
