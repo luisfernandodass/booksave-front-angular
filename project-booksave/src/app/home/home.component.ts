@@ -14,8 +14,6 @@ export class HomeComponent implements OnInit {
     book: new FormControl('')
   })
 
-  book = new FormControl('');
-
   ngOnInit() {
     this.getBookInLocalStorage();
   }

@@ -21,8 +21,11 @@ export class RowBookComponent {
 
   editInfoBook(): void {}
 
-  deleteBookElement(e: Event): void {
+  deleteBook(e: Event): void {
     const element = (e.currentTarget as HTMLElement).closest('mat-card') as HTMLElement;
+    const bookName = element.querySelector('.book-name')?.textContent?.trim();
+
     element.style.display = 'none';
+    localStorage.removeItem(bookName as string);
   }
 }
