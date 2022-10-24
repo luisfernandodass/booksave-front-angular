@@ -7,7 +7,7 @@ Book Save é um aplicativo para você controlar quais e quantos livros você já
 #### Para ver a aplicação renderizada na web
 - Acesse o site pelo link: https://
 
-#### Caso queira rodar localmente na sua máquina, siga os passos abaixo:
+#### Caso queira rodar localmente mockado na sua máquina, siga os passos abaixo:
 - Acesse a pasta project-booksave e rode o comando ``npm run json:server`` para rodar um servidor local mockado.
 - Acesse a pasta project-booksave e rode o comando ``npm run start`` para subir a aplicação web no seu browser.
 - No browser, navegue para <a href="http://localhost:4200/home">http://localhost:4200/home</a>
