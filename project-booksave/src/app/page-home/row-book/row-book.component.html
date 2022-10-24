@@ -1,0 +1,29 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+          {{title}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <span id="actions-crud">
+      <button type="button">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit">edit</mat-icon>
+      </button>
+
+      <button type="button" (click)="deleteBook($event)">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="red">delete</mat-icon>
+      </button>
+    </span>
+
+    <div class="container-description">
+      <ng-container *ngIf="!description">
+        <p>não há descrição</p>
+      </ng-container>
+
+      <ng-container *ngIf="description">
+        <p class="description">{{description}}</p>
+      </ng-container>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+

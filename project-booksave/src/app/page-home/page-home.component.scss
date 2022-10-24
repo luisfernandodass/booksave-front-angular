@@ -1,0 +1,77 @@
+@use '../../assets/variable.scss' as color;
+
+.wrapper-page-booksave {
+  display: flex;
+  flex-direction: column;
+
+  .title-app {
+    color: color.$dark-color;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    input {
+      color: color.$dark-color;
+      background: transparent;
+      border: none;
+      border-bottom: .5px solid color.$dark-color;
+      padding: 8px 12px;
+      margin-bottom: 1rem;
+    }
+
+    input::placeholder {
+      background: transparent;
+      color: color.$dark-color;
+    }
+
+    #title {
+      width: 45%;
+    }
+
+    button {
+      background: color.$dark-color;
+      color: color.$light-color;
+      height: 48px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+      font-weight: bold;
+    }
+  }
+
+  .container-books, .empty-container-books {
+    width: auto;
+    height: 360px;
+    padding: 2rem 1rem;
+    border: 0.5px solid color.$dark-color;
+    border-radius: 4px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    mat-card-title {
+      display: flex;
+      align-self: flex-start;
+      font-size: 18px;
+      color: color.$dark-color;
+    }
+
+    app-row-book {
+      width: 100%;
+    }
+  }
+
+  .author {
+    margin-top: 1rem;
+    text-align: center;
+    color: color.$dark-color;
+  }
+}

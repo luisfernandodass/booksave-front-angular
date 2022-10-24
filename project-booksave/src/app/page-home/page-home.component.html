@@ -1,0 +1,40 @@
+<div class="wrapper-page-booksave">
+  <span class="title-app">
+    Booksave
+  </span>
+  <form class="book-form" [formGroup]="bookForm">
+
+    <input type="text" placeholder="nome do livro" id="title" formControlName="title" />
+
+    <input type="text" placeholder="descrição do livro" id="description" formControlName="description" />
+
+    <button type="button" (click)="bookForm.get('title')?.value !== '' ? addBook() : ''">
+      adicionar livro
+    </button>
+  </form>
+
+  <mat-card [ngClass]='qntdBooks === 0 ? "empty-container-books": "container-books"'>
+
+    <ng-container *ngIf="qntdBooks === 0">
+      <p>ainda não há livros, adicione-os.</p>
+    </ng-container>
+
+    <ng-container *ngIf="qntdBooks > 0">
+      <mat-card-title>
+        <b>{{qntdBooks}}
+          <ng-container *ngIf="qntdBooks === 1">
+            livro
+          </ng-container>
+          <ng-container *ngIf="qntdBooks > 1">
+            livros
+          </ng-container>
+        </b>
+      </mat-card-title>
+
+      <app-row-book *ngFor="let book of books" [title]="book.title" [description]="book.description"
+        (deleteBook$)="deleteBook($event)">
+      </app-row-book>
+    </ng-container>
+  </mat-card>
+  <p class="author">Desenvolvido por Luis Fernando, 2022.</p>
+</div>

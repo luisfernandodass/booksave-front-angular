@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@use './assets/variable.scss' as color;
 
 html, body { height: 100%; }
 body, div, section, span, button, p, input, a { margin: 0; padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
-  background: #0D1117;
+  background: color.$light-color;
   display: flex;
   justify-content: center;
   align-items: center;

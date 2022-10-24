@@ -1,0 +1,26 @@
+@use '../../../assets/variable.scss' as color;
+
+mat-accordion {
+  #actions-crud {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    right: 14px;
+    position: absolute;
+    gap: 1rem;
+
+    button {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      color: color.$dark-color;
+    }
+  }
+
+  .container-description {
+    p {
+      padding-left: .5rem;
+      color: color.$dark-color;
+    }
+  }
+}
