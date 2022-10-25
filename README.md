@@ -13,7 +13,9 @@ Book Save é um aplicativo para você controlar quais e quantos livros você já
 - No browser, navegue para <a href="http://localhost:4200/home">http://localhost:4200/home</a>
 
 ## Preview | Imagens da aplicação
-![image](https://user-images.githubusercontent.com/67171626/196010719-9da78d06-8aa5-480c-a0eb-1ffe97d89571.png)![image](https://user-images.githubusercontent.com/67171626/196010825-8a4c3b6a-69f8-49ab-90fa-464a486747dc.png)![image](https://user-images.githubusercontent.com/67171626/196010842-f403a278-2133-4227-aaf1-0295a63c477c.png)
+![localhost_4200_home(iPhone XR)](https://user-images.githubusercontent.com/67171626/197795193-9a33c238-6b66-4343-ad1a-c826f5cadbca.png)
+![localhost_4200_home(iPhone XR) (1)](https://user-images.githubusercontent.com/67171626/197796732-4a649d65-8c18-4002-9e6f-d4fe94dd8629.png)
+![localhost_4200_home(iPhone XR) (2)](https://user-images.githubusercontent.com/67171626/197796900-2d3cf14d-03e6-4c3c-8c03-80daa4148342.png)
 
 ## License
 <img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>
