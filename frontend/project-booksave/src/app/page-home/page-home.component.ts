@@ -10,36 +10,37 @@ import { BookControllerService } from '../shared/services/book-controller.servic
 })
 export class PageHomeComponent implements OnInit {
 
-  books: Book[] = [];
-  book: Book;
-  qntdBooks: number = 0;
+  books: Book[];
+  titleIsEmpty = false;
 
   bookForm = new FormGroup({
-    title: new FormControl(),
-    description: new FormControl()
+    title: new FormControl(''),
+    description: new FormControl('')
   })
 
   constructor(private bookControllerService: BookControllerService) { }
 
   ngOnInit(): void {
+    this.bookControllerService.getBooks().subscribe((book: Book[]) => {
+      this.books = book;
+    });
   }
 
   public addBook(): void {
-    const bookTitle = this.bookForm.get('title')?.value;
-    const bookDescription = this.bookForm.get('description')?.value;
-    this.bookControllerService.addBook(bookTitle, bookDescription).subscribe((book: Book) => {
-      this.books.push(book);
-      this.book = book;
-      this.qntdBooks++;
+    const title = this.bookForm.get('title')?.value;
+    const description = this.bookForm.get('description')?.value;
+    title == '' ? this.titleIsEmpty = true : this.titleIsEmpty = false;
+
+    this.bookControllerService.addBook(title, description).subscribe((book: Book[]) => {
+      this.books = book;
     });
-    console.log('#addBook this.books', this.books)
   }
 
-  deleteBook(book: Book) {
-    const indexof = this.books.map((b) => b === book).indexOf(true);
-    this.books.splice(indexof)
-    console.log('#deleteBook this.books', this.books);
-    this.qntdBooks--;
-  }
+  // deleteBook(book: Book) {
+  //   const indexof = this.books.map((b) => b === book).indexOf(true);
+  //   this.books.splice(indexof)
+  //   console.log('#deleteBook this.books', this.books);
+  //   this.qntdBooks--;
+  // }
 
 }

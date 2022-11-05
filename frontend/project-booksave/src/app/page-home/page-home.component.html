@@ -4,7 +4,8 @@
   </span>
   <form class="book-form" [formGroup]="bookForm">
 
-    <input type="text" placeholder="nome do livro" id="title" formControlName="title" />
+    <input type="text" placeholder="nome do livro" [ngClass]="titleIsEmpty ? 'input-error' : ''" id="title" formControlName="title" />
+    <span *ngIf="titleIsEmpty" [ngClass]="titleIsEmpty ? 'input-error' : ''">preencha um nome de livro</span>
 
     <input type="text" placeholder="descrição do livro" id="description" formControlName="description" />
 
@@ -13,28 +14,30 @@
     </button>
   </form>
 
-  <mat-card [ngClass]='qntdBooks === 0 ? "empty-container-books": "container-books"'>
-
-    <ng-container *ngIf="qntdBooks === 0">
-      <p>ainda não há livros, adicione-os.</p>
-    </ng-container>
-
-    <ng-container *ngIf="qntdBooks > 0">
-      <mat-card-title>
-        <b>{{qntdBooks}}
-          <ng-container *ngIf="qntdBooks === 1">
+  <div class="container-saved-books">
+    <ng-container *ngIf="books.length > 0">
+      <span class="qntd-books">
+        <b>{{books.length}}
+          <ng-container *ngIf="books.length === 1">
             livro
           </ng-container>
-          <ng-container *ngIf="qntdBooks > 1">
+          <ng-container *ngIf="books.length > 1">
             livros
           </ng-container>
         </b>
-      </mat-card-title>
+      </span>
 
-      <app-row-book *ngFor="let book of books" [title]="book.title" [description]="book.description"
-        (deleteBook$)="deleteBook($event)">
-      </app-row-book>
+    <div [ngClass]='books.length === 0 ? "empty-container-books": "container-books"'>
+
+      <ng-container *ngIf="books.length === 0">
+        <p>ainda não há livros, adicione-os.</p>
+      </ng-container>
+
+        <app-row-book *ngFor="let book of books" [title]="book.title" [description]="book.description">
+        </app-row-book>
+    </div>
     </ng-container>
-  </mat-card>
+  </div>
+
   <p class="author">Desenvolvido por Luis Fernando, 2022.</p>
 </div>
