@@ -16,12 +16,10 @@ export class RowBookComponent {
   constructor(private bookControllerService: BookControllerService) { }
 
   deleteBook(e: Event): void {
-    let id = 0;
-    id++;
     const element = (e.currentTarget as HTMLElement).closest('mat-expansion-panel') as HTMLElement;
-    const title = element.querySelector('.title')?.textContent?.trim();
-    const description = element.querySelector('.description')?.textContent?.trim();
-    this.deleteBook$.emit({title, description, id});
+    const title = element.querySelector('.title')?.textContent;
     element.style.display = 'none';
+    this.bookControllerService.deleteBookByTitle(title).subscribe();
+    window.location.reload();
   }
 }

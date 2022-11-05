@@ -19,4 +19,8 @@ export class BookControllerService {
         map(response => response)
       );
   }
+
+  deleteBookByTitle(title: string) {
+    return this.http.delete(`http://localhost:3000/books/${title}`);
+  }
 }

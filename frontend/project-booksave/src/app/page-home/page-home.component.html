@@ -4,12 +4,16 @@
   </span>
   <form class="book-form" [formGroup]="bookForm">
 
-    <input type="text" placeholder="nome do livro" [ngClass]="titleIsEmpty ? 'input-error' : ''" id="title" formControlName="title" />
-    <span *ngIf="titleIsEmpty" [ngClass]="titleIsEmpty ? 'input-error' : ''">preencha um nome de livro</span>
+    <input type="text" placeholder="nome do livro" id="title" formControlName="title" (change)="validateTitle()" />
+    <!-- <span *ngIf="titleIsEmpty" [ngClass]="titleIsEmpty ? 'input-error' : ''">preencha um nome de livro</span> -->
 
     <input type="text" placeholder="descrição do livro" id="description" formControlName="description" />
 
-    <button type="button" (click)="bookForm.get('title')?.value !== '' ? addBook() : ''">
+    <button type="button"
+      [ngClass]="titleIsEmpty ? 'btn-disabled' : 'btn-active'"
+      [disabled]="titleIsEmpty"
+      (click)="titleIsEmpty ? '' : addBook()"
+    >
       adicionar livro
     </button>
   </form>

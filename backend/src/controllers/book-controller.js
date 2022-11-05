@@ -1,28 +1,67 @@
 'use strict';
 
-const response = [
-    {
-        title: "Livro 1",
-        description: "Dahora",
-    }
-];
+const mongoose = require('mongoose');
+const Book = mongoose.model('Book');
 
-
-exports.post = (req, res, next) => {
-    response.push(req.body)
-    res.status(201).send(response);
+exports.get = (req, res, next) => {
+    Book.find({})
+      .then(books => {
+        res.status(200).send(books);
+      }).catch(err => {
+        res.status(400).send({ message: 'Não foi possível consultar os livros cadastrados, tente novamente!', data: err });
+      });
 }
 
-exports.put = (req, res, next) => {
-    const id = req.params.id;
-    res.status(204).send({ 
-        id: id, 
-        item: req.body 
+exports.getByTitle = (req, res, next) => {
+    Book.findOne({ title: req.params.title })
+      .then(books => {
+        res.status(200).send(books);
+      }).catch(err => {
+        res.status(400).send({ message: 'Não foi possível consultar os livros cadastrados, tente novamente!', data: err });
+      });
+}
+
+exports.post = (req, res, next) => {
+    const book = new Book();
+    book.title = req.body.title;
+    book.description = req.body.description;
+
+    book.save()
+    .then(x => {
+        res.status(201).send({ message: 'Livro cadastrado com sucesso!' });
+    }).catch(err => {
+        res.status(400).send({ message: 'Livro não cadastrado, algo errado aconteceu', data: err });
+    });
+}
+
+exports.put = (req, res, next) => { 
+    Book.findByIdAndUpdate(req.params.id, {
+        $set: {
+            title: req.body.title,
+            description: req.body.description
+        }
+    }).then(book => {
+        res.status(204).send({
+            message: 'Livro atualizado com sucesso!'
+        });
+    }).catch(err => {
+        res.status(400).send({
+            message: 'Falha ao atualizar livro',
+            data: err
+        }); 
     });
 }
 
 exports.delete = (req, res, next) => {
-    res.status(200).send(req.body);
+    Book.findOneAndRemove({ title: req.params.title })
+    .then(book => {
+        res.status(204).send({
+            message: 'Livro removido com sucesso!'
+        });
+    }).catch(err => {
+        res.status(400).send({
+            message: 'Falha ao remover livro',
+            data: err
+        }); 
+    });
 }
-
-exports.module = response;

@@ -11,7 +11,7 @@ import { BookControllerService } from '../shared/services/book-controller.servic
 export class PageHomeComponent implements OnInit {
 
   books: Book[];
-  titleIsEmpty = false;
+  titleIsEmpty = true;
 
   bookForm = new FormGroup({
     title: new FormControl(''),
@@ -26,21 +26,17 @@ export class PageHomeComponent implements OnInit {
     });
   }
 
+  validateTitle(): boolean {
+    return this.bookForm.get('title')?.value == '' ? this.titleIsEmpty = true : this.titleIsEmpty = false;
+  }
+
   public addBook(): void {
     const title = this.bookForm.get('title')?.value;
     const description = this.bookForm.get('description')?.value;
-    title == '' ? this.titleIsEmpty = true : this.titleIsEmpty = false;
-
     this.bookControllerService.addBook(title, description).subscribe((book: Book[]) => {
       this.books = book;
+      window.location.reload();
     });
   }
-
-  // deleteBook(book: Book) {
-  //   const indexof = this.books.map((b) => b === book).indexOf(true);
-  //   this.books.splice(indexof)
-  //   console.log('#deleteBook this.books', this.books);
-  //   this.qntdBooks--;
-  // }
 
 }

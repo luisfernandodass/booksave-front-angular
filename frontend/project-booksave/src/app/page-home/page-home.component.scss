@@ -41,14 +41,22 @@
       width: 45%;
     }
 
-    button {
-      background: color.$dark-color;
-      color: color.$light-color;
+    .btn-disabled, .btn-active {
       height: 48px;
-      cursor: pointer;
       border-radius: 4px;
       border: none;
       font-weight: bold;
+    }
+
+    .btn-disabled {
+      cursor: not-allowed!important;
+      background: gray;
+    }
+
+    .btn-active {
+      background: color.$dark-color;
+      color: color.$light-color;
+      cursor: pointer;
     }
   }
 
@@ -71,7 +79,7 @@
   .container-books, .empty-container-books {
     width: auto;
     gap: 1rem;
-    max-height: 300px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
