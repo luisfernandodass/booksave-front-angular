@@ -25,7 +25,6 @@ exports.post = (req, res, next) => {
     const book = new Book();
     book.title = req.body.title;
     book.description = req.body.description;
-
     book.save()
     .then(x => {
         res.status(201).send({ message: 'Livro cadastrado com sucesso!' });
@@ -35,12 +34,10 @@ exports.post = (req, res, next) => {
 }
 
 exports.put = (req, res, next) => { 
-    Book.findByIdAndUpdate(req.params.id, {
-        $set: {
-            title: req.body.title,
-            description: req.body.description
-        }
-    }).then(book => {
+  Book.findOne({ title: req.params.title })
+  .then((book) => {
+        book.title = req.title;
+        book.description = req.description;
         res.status(204).send({
             message: 'Livro atualizado com sucesso!'
         });

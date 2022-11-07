@@ -10,8 +10,8 @@ export class RowBookComponent {
 
   @Input() title;
   @Input() description;
-  @Output() deleteBook$ = new EventEmitter<any>();
   public panelOpenState = false;
+  public editDescription = false;
 
   constructor(private bookControllerService: BookControllerService) { }
 
@@ -20,6 +20,21 @@ export class RowBookComponent {
     const title = element.querySelector('.title')?.textContent;
     element.style.display = 'none';
     this.bookControllerService.deleteBookByTitle(title).subscribe();
-    window.location.reload();
+  }
+
+  updateBook(e: Event): void {
+    const element = (e.currentTarget as HTMLElement).closest('mat-expansion-panel') as HTMLElement;
+    const title = element.querySelector('.title')?.textContent.trim();
+    const description = element.querySelector('.edit-description').textContent;
+
+    this.bookControllerService.updateBook(title, description).subscribe();
+  }
+
+  openEditBook(e: Event): void {
+    this.editDescription = true;
+  }
+
+  cancelEdit(): void {
+    this.editDescription = false;
   }
 }

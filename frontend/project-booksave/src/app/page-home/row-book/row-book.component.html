@@ -6,23 +6,33 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <span id="actions-crud">
-      <button type="button">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit">edit</mat-icon>
-      </button>
+      <ng-container *ngIf="!editDescription">
+        <button type="button" (click)="openEditBook($event)">
+          <mat-icon fontIcon="edit">edit</mat-icon>
+        </button>
 
-      <button type="button" (click)="deleteBook($event)">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="red">delete</mat-icon>
-      </button>
+        <button type="button" (click)="deleteBook($event)">
+          <mat-icon fontIcon="delete" color="red">delete</mat-icon>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="editDescription">
+        <button type="button" (click)="cancelEdit()">
+          <mat-icon fontIcon="cancel">cancel</mat-icon>
+        </button>
+
+        <button type="button" (click)="updateBook($event)">
+          <mat-icon fontIcon="check">check</mat-icon>
+        </button>
+      </ng-container>
     </span>
 
-    <div class="container-description">
-      <ng-container *ngIf="!description">
-        <p>não há descrição</p>
-      </ng-container>
-
-      <ng-container *ngIf="description">
-        <p class="description">{{description}}</p>
-      </ng-container>
+    <div class="description">
+        <input
+          type="text"
+          [ngClass]="editDescription ? 'edit-description' : 'no-edit-description'"
+          [value]="description ? description : 'não há descrição'"
+          [disabled]="!editDescription">
     </div>
   </mat-expansion-panel>
 </mat-accordion>
