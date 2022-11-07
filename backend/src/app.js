@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 // Conecta ao banco
-mongoose.connect('mongodb+srv://luisfernandodass:10132875@cluster0.mbjbkfa.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://luisfernandodass:<pwd>@cluster0.mbjbkfa.mongodb.net/?retryWrites=true&w=majority');
 
 // Carrega os Models
 const Book = require('./models/book');

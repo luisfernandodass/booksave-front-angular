@@ -21,10 +21,7 @@ export class BookControllerService {
   }
 
   updateBook(title: string, description: string) {
-    return this.http.put(`http://localhost:3000/books/${title}`, {description})
-      .pipe(
-        map(response => response)
-      )
+    return this.http.put(`http://localhost:3000/books/${title}`, {title, description})
   }
 
   deleteBookByTitle(title: string) {

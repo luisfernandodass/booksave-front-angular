@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { BookControllerService } from 'src/app/shared/services/book-controller.service';
 
 @Component({
@@ -6,14 +7,23 @@ import { BookControllerService } from 'src/app/shared/services/book-controller.s
   templateUrl: './row-book.component.html',
   styleUrls: ['./row-book.component.scss']
 })
-export class RowBookComponent {
+export class RowBookComponent implements OnInit {
 
   @Input() title;
   @Input() description;
   public panelOpenState = false;
   public editDescription = false;
 
+  form = new FormGroup({
+    title: new FormControl(),
+    description: new FormControl()
+  })
+
   constructor(private bookControllerService: BookControllerService) { }
+
+  ngOnInit(): void {
+    this.form.get('description').setValue(this.description);
+  }
 
   deleteBook(e: Event): void {
     const element = (e.currentTarget as HTMLElement).closest('mat-expansion-panel') as HTMLElement;
@@ -25,9 +35,8 @@ export class RowBookComponent {
   updateBook(e: Event): void {
     const element = (e.currentTarget as HTMLElement).closest('mat-expansion-panel') as HTMLElement;
     const title = element.querySelector('.title')?.textContent.trim();
-    const description = element.querySelector('.edit-description').textContent;
-
-    this.bookControllerService.updateBook(title, description).subscribe();
+    const description = this.form.get('description');
+    this.bookControllerService.updateBook(title, description.value).subscribe();
   }
 
   openEditBook(e: Event): void {

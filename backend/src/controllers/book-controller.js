@@ -34,12 +34,12 @@ exports.post = (req, res, next) => {
 }
 
 exports.put = (req, res, next) => { 
-  Book.findOne({ title: req.params.title })
+  const filter = { title: req.params.title };
+  const update = { title: req.body.title, description: req.body.description };
+  Book.findOneAndUpdate(filter, update)
   .then((book) => {
-        book.title = req.title;
-        book.description = req.description;
         res.status(204).send({
-            message: 'Livro atualizado com sucesso!'
+            message: book
         });
     }).catch(err => {
         res.status(400).send({

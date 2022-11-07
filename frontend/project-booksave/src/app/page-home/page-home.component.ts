@@ -30,10 +30,12 @@ export class PageHomeComponent implements OnInit {
     return this.bookForm.get('title')?.value == '' ? this.titleIsEmpty = true : this.titleIsEmpty = false;
   }
 
-  public addBook(): void {
-    const title = this.bookForm.get('title')?.value;
-    const description = this.bookForm.get('description')?.value;
-    this.bookControllerService.addBook(title, description).subscribe((book: Book[]) => {
+  addBook(): void {
+    const title = this.bookForm.get('title');
+    const description = this.bookForm.get('description');
+    if (description?.value == '') description?.setValue('não há descricão');
+
+    this.bookControllerService.addBook(title.value, description?.value).subscribe((book: Book[]) => {
       this.books = book;
       window.location.reload();
     });

@@ -27,13 +27,17 @@
       </ng-container>
     </span>
 
-    <div class="description">
+    <form action="" [formGroup]="form">
+      <div class="description">
         <input
+          formControlName = "description"
           type="text"
           [ngClass]="editDescription ? 'edit-description' : 'no-edit-description'"
-          [value]="description ? description : 'não há descrição'"
+          [value]="form.get('description').value"
           [disabled]="!editDescription">
-    </div>
+     </div>
+    </form>
+
   </mat-expansion-panel>
 </mat-accordion>
 
