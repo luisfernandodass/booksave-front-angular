@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const cors = require('cors');
+const config = require('./config');
 const app = express();
 
 // Conecta ao banco
-mongoose.connect('mongodb+srv://luisfernandodass:<pwd>@cluster0.mbjbkfa.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(config.connectionString);
 
 // Carrega os Models
 const Book = require('./models/book');

@@ -2,16 +2,23 @@
 
 Book Save é um aplicativo para você controlar quais e quantos livros você já leu, ah, também dá para deixar suas notas sobre a leitura.
 
-#### Principais no frontend e backend
+## Como rodar
+
+#### Principais bibliotecas utilizadas no backend
 - Npm => v8.10.0
 - Node => v16.13.1
 - Express => v4.18.2
+- Http => v0.0.1-security
+- MD5 => v2.3.0
 - Mongoose => v6.7.1
-- Angular v13.0.0
-- Typescript => v4.6.2
+- Body-Parser => v1.20.1
 - Cors => v2.8.5
 
-As demais dependências se encontram no package.json das pastas frontend e backend.
+#### Principais bilbiotecas utilizadas no frontend
+- Angular v13.0.0
+- Angular Material => v13.3.9
+- Rxjs => v7.5.0
+- Typescript => v4.6.2
 
 #### Caso queira rodar localmente mockado na sua máquina, siga os passos abaixo:
 - Acesse a pasta project-booksave e rode o comando ``npm run json:server`` para rodar um servidor local mockado.
