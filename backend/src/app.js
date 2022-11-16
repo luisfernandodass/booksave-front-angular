@@ -7,7 +7,7 @@ const config = require('./config');
 const app = express();
 
 // Conecta ao banco
-mongoose.connect(config.connectionString);
+mongoose.connect('mongodb+srv://luisfernandodass:CTLdGBP1mrYdZqAL@cluster0.mbjbkfa.mongodb.net/?retryWrites=true&w=majority');
 
 // Carrega os Models
 const Book = require('./models/book');
