@@ -1,15 +1,16 @@
 # Book Save
 
-Book Save é um aplicativo para você controlar quais e quantos livros você já leu, ah, também dá para deixar suas notas sobre a leitura.
-
-## Como rodar
+Book Save é um aplicativo para você controlar quais e quantos livros você já leu e adicionar notas na descritivas. 
+Contém as funcionalidades de CRUD - Cria os livros, atualiza a descrição, pega os livros adicionados e exclui os livros
 
 #### Para ver a aplicação renderizada na web
-- Acesse o site pelo link: https://
+- Acesse o site pelo link: (ainda não há)
 
-#### Caso queira rodar localmente mockado na sua máquina, siga os passos abaixo:
-- Acesse a pasta project-booksave e rode o comando ``npm run json:server`` para rodar um servidor local mockado.
-- Acesse a pasta project-booksave e rode o comando ``npm run start`` para subir a aplicação web no seu browser.
+### Como rodar a aplicação no backend
+- Acesse a pasta booksave > backend e rode o comando ``npm run start``
+
+### Como rodar a aplicação no frontend
+- Acesse a pasta frontend > project-booksave e rode o comando ``npm run start`` para subir a aplicação web no seu browser.
 - No browser, navegue para <a href="http://localhost:4200/home">http://localhost:4200/home</a>
 
 ## Preview | Imagens da aplicação
@@ -25,6 +26,6 @@ Book Save é um aplicativo para você controlar quais e quantos livros você já
 
 <b>Luis Fernando</b>  
 
-Entre em contato comigo!
+Entre em contato comigo pelos links abaixo:
 
 [![Linkedin Badge](https://img.shields.io/badge/-Luis-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luisfernando/)](https://www.linkedin.com/in/luisfernando/) [![Gmail Badge](https://img.shields.io/badge/-luisfernandodass@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luisfernandodass@gmail.com)](mailto:luisfernandodass@gmail.com)
