@@ -3,6 +3,9 @@
 Book Save é um aplicativo para você controlar quais e quantos livros você já leu e adicionar notas na descritivas. 
 Contém as funcionalidades de CRUD - Cria os livros, atualiza a descrição, pega os livros adicionados e exclui os livros
 
+### Quado kanban que utilizei para auxiliar no projeto
+- <a href="https://plump-loaf-efc.notion.site/cc30609585cf46ef8994d49a05e71bd3?v=3ccc865b63a6471c99728fb5d14ba5c7">Kanban Booksave</a>
+
 #### Para ver a aplicação renderizada na web
 - Acesse o site pelo link: (ainda não há)
 
@@ -14,9 +17,7 @@ Contém as funcionalidades de CRUD - Cria os livros, atualiza a descrição, peg
 - No browser, navegue para <a href="http://localhost:4200/home">http://localhost:4200/home</a>
 
 ## Preview | Imagens da aplicação
-![localhost_4200_home(iPhone XR)](https://user-images.githubusercontent.com/67171626/197795193-9a33c238-6b66-4343-ad1a-c826f5cadbca.png)
-![localhost_4200_home(iPhone XR) (1)](https://user-images.githubusercontent.com/67171626/197796732-4a649d65-8c18-4002-9e6f-d4fe94dd8629.png)
-![localhost_4200_home(iPhone XR) (2)](https://user-images.githubusercontent.com/67171626/197796900-2d3cf14d-03e6-4c3c-8c03-80daa4148342.png)
+<img width="33%" src="https://user-images.githubusercontent.com/67171626/197795193-9a33c238-6b66-4343-ad1a-c826f5cadbca.png"> <img width="33%" src="https://user-images.githubusercontent.com/67171626/197796732-4a649d65-8c18-4002-9e6f-d4fe94dd8629.png"> <img width="33%" src="https://user-images.githubusercontent.com/67171626/197796900-2d3cf14d-03e6-4c3c-8c03-80daa4148342.png">
 
 ## License
 <img src="https://img.shields.io/github/license/luisfernandodass/book-save"/>
