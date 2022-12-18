@@ -3,7 +3,7 @@
 Book Save é um aplicativo para você controlar quais e quantos livros você já leu e adicionar notas na descritivas. 
 Contém as funcionalidades de CRUD - Cria os livros, atualiza a descrição, pega os livros adicionados e exclui os livros
 
-### Quado kanban que utilizei para auxiliar no projeto
+### Quadro kanban que utilizei para auxiliar no projeto
 - <a href="https://plump-loaf-efc.notion.site/cc30609585cf46ef8994d49a05e71bd3?v=3ccc865b63a6471c99728fb5d14ba5c7">Kanban Booksave</a>
 
 #### Para ver a aplicação renderizada na web
