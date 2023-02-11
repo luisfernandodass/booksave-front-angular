@@ -12,7 +12,6 @@ export class PageHomeComponent implements OnInit {
 
   books: Book[];
   titleIsEmpty = true;
-  isFooterOpen = false;
 
   bookForm = new FormGroup({
     title: new FormControl(''),
@@ -32,19 +31,6 @@ export class PageHomeComponent implements OnInit {
   }
 
   addBook(): void {
-    const title = this.bookForm.get('title');
-    const description = this.bookForm.get('description');
-    if (description?.value == '') description?.setValue('não há descricão');
 
-    this.bookControllerService.addBook(title.value, description?.value).subscribe((book: Book[]) => {
-      this.books = book;
-      window.location.reload();
-    });
   }
-
-  openFooter(): void {
-    this.isFooterOpen = true;
-    console.log('this.isFooterOpen', this.isFooterOpen);
-  }
-
 }

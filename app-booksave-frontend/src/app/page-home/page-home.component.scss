@@ -1,7 +1,7 @@
 @use '../../assets/variable.scss' as color;
 
 .wrapper-page-booksave {
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   margin: 0rem 1rem;
@@ -37,29 +37,18 @@
     }
   }
 
-  .container-saved-books {
-    width: auto;
-    height: 360px;
-    padding: 2rem 1rem;
-    border-radius: 4px;
-    background: #fff;
-
+  .flex-column {
     .qntd-books {
       display: flex;
-      align-self: flex-start;
-      font-size: 18px;
-      color: color.$dark-color;
+      justify-content: flex-end;
+      color: #1c1c1c;
+      font-size: 14px;
     }
+
+    .box-books {
+      height: 270px;
+      overflow-y: scroll;
+    }
+
   }
-}
-
-::-webkit-scrollbar {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  width: .5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background: color.$dark-color;
-  border-radius: 1rem;
 }
