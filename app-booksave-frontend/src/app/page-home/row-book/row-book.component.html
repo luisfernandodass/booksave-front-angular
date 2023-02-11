@@ -1,0 +1,43 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+          {{title}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <span id="actions-crud">
+      <ng-container *ngIf="!editDescription">
+        <button type="button" (click)="openEditBook($event)">
+          <mat-icon fontIcon="edit">edit</mat-icon>
+        </button>
+
+        <button type="button" (click)="deleteBook($event)">
+          <mat-icon fontIcon="delete" color="red">delete</mat-icon>
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="editDescription">
+        <button type="button" (click)="cancelEdit()">
+          <mat-icon fontIcon="cancel">cancel</mat-icon>
+        </button>
+
+        <button type="button" (click)="updateBook($event)">
+          <mat-icon fontIcon="check">check</mat-icon>
+        </button>
+      </ng-container>
+    </span>
+
+    <form action="" [formGroup]="form">
+      <div class="description">
+        <input
+          formControlName = "description"
+          type="text"
+          [ngClass]="editDescription ? 'edit-description' : 'no-edit-description'"
+          [value]="form.get('description').value"
+          [disabled]="!editDescription">
+     </div>
+    </form>
+
+  </mat-expansion-panel>
+</mat-accordion>
+

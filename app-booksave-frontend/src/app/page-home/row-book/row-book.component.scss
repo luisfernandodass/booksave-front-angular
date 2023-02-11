@@ -1,0 +1,31 @@
+@use '../../../assets/variable.scss' as color;
+
+mat-accordion {
+  #actions-crud {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    right: 14px;
+    position: absolute;
+    gap: 1rem;
+
+    button {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      color: color.$dark-color;
+    }
+  }
+
+  .description {
+    .no-edit-description, .edit-description {
+      padding-left: .5rem;
+      color: color.$dark-color;
+      border: 0;
+    }
+
+    .edit-description {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}

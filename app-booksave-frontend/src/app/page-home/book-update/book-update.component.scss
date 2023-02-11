@@ -1,0 +1,54 @@
+.wrapper-update-book {
+  height: 25vh;
+  background: #1C1C1C;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  svg {
+    fill: #FFF;
+  }
+
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .body-form {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      gap: .5rem;
+
+      input {
+        font-family: 'Roboto';
+        background: transparent;
+        border: 0;
+        height: 1rem;
+      }
+
+      .book-name {
+        font-size: 1rem;
+        color: #FFF;
+      }
+
+      .book-name::placeholder {
+        color: #FFF;
+      }
+
+      .book-description {
+        font-size: 14px;
+        color: #8E8E93;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

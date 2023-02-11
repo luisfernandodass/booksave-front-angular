@@ -1,0 +1,65 @@
+@use '../../assets/variable.scss' as color;
+
+.wrapper-page-booksave {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+
+  h1 {
+    color: #56504C;
+    font-family: 'Roboto';
+    text-align: center;
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+
+    color: #56504C;
+    font-family: 'Roboto';
+    font-size: 12px;
+
+    width: 100%;
+
+    input {
+      padding: .5rem 1rem;
+      border: 0;
+      width: 100%;
+    }
+
+    svg {
+      fill: #56504C;
+    }
+  }
+
+  .container-saved-books {
+    width: auto;
+    height: 360px;
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    background: #fff;
+
+    .qntd-books {
+      display: flex;
+      align-self: flex-start;
+      font-size: 18px;
+      color: color.$dark-color;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color.$dark-color;
+  border-radius: 1rem;
+}

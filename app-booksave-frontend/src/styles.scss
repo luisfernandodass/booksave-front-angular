@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@use './assets/variable.scss' as color;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  width: 100%;
+}
+
+.mt-m {
+  margin-top: 1rem!important;
+}
+
+.mt-b {
+  margin-bottom: 1rem!important;
+}
+
+.mt-mb {
+  margin: 1rem 0!important;
+}
+
