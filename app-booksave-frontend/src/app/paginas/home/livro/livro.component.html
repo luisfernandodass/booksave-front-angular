@@ -1,0 +1,14 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState">
+    <mat-expansion-panel-header>
+      <span class="info-livro">
+        <b class="titulo">
+          {{ livro.titulo | uppercase}}
+        </b>
+        <p class="description">
+          {{ livro.descricao }}
+        </p>
+      </span>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>

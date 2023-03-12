@@ -1,0 +1,33 @@
+<button
+  *ngIf="!isCaixaEdicaoAberta"
+  type="button" class="btn_abrir-caixa-edicao-livro"
+  (click)="toggleCaixaDeEdicao()"
+>
+  +
+</button>
+
+<ng-container *ngIf="isCaixaEdicaoAberta">
+  <div class="wrapper-edicao-livro">
+    <div class="top-edicao-livro">
+      <img [src]="icon_fechar" alt="" role="button" (click)="toggleCaixaDeEdicao()">
+    </div>
+
+    <form class="book-form" [formGroup]="form">
+
+      <div class="body-form">
+        <input class="book-name" type="text" placeholder="nome do livro" formControlName="titulo"
+          (change)="validarTitulo()"
+        />
+
+        <input class="book-descricao" type="text" placeholder="descrição do livro"
+          formControlName="descricao"
+        />
+      </div>
+
+      <div class="flex-row">
+        <img [src]="icon_lixo" alt="" role="button" class="btn-delete-book">
+        <img [src]="icon_check" alt="" role="button" class="btn-update-book" [ngClass]="isTituloVazio ? 'btn-disabled' : 'btn-active'" (click)="adicionarLivro()">
+      </div>
+    </form>
+  </div>
+</ng-container>

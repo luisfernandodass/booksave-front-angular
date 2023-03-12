@@ -7,6 +7,10 @@ html, body {
   padding: 0;
 }
 
+body {
+  background: cornsilk;
+}
+
 app-root {
   width: 100%;
 }
@@ -29,5 +33,9 @@ app-root {
 
 .mt-mb {
   margin: 1rem 0!important;
+}
+
+.g-mb-4 {
+  margin-bottom: 4px;
 }
 

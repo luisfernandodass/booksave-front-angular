@@ -4,27 +4,27 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RowBookComponent } from './page-home/row-book/row-book.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { PageLoginComponent } from './page-login/page-login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { PageHomeComponent } from './page-home/page-home.component';
-import { BookUpdateComponent } from './page-home/book-update/book-update.component';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './paginas/login/login.component';
+import { HomeComponent } from './paginas/home/home.component';
+import { LivroComponent } from './paginas/home/livro/livro.component';
+import { EdicaoLivroComponent } from './paginas/home/edicao-livro/edicao-livro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RowBookComponent,
-    PageLoginComponent,
-    PageHomeComponent,
-    BookUpdateComponent
+    LoginComponent,
+    HomeComponent,
+    LivroComponent,
+    EdicaoLivroComponent
   ],
   imports: [
     BrowserModule,

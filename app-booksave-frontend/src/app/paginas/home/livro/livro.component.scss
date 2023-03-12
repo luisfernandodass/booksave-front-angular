@@ -1,0 +1,10 @@
+mat-expansion-panel-header {
+  height: fit-content;
+
+  .info-livro {
+    padding: .5rem 0;
+    .descricao {
+      text-overflow: ellipsis;
+    }
+  }
+}
