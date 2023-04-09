@@ -14,14 +14,14 @@
   </form>
 
   <div class="flex-column mt-m">
-    <ng-container *ngIf="livros$ | async as livros">
+    <ng-container *ngIf="livros && livros.length > 0">
       <span class="qntd-livros mb-m">
         {{ livros.length }}
         {{ livros.length === 1 ? 'livro': 'livros' }}
       </span>
 
       <div class="wrapper-livros">
-        <app-livro *ngFor="let livro of livros" [livro]="livro"></app-livro>
+        <app-livro *ngFor="let livro of livrosBuscados" [livro]="livro"></app-livro>
       </div>
     </ng-container>
   </div>

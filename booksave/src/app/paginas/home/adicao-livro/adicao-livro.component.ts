@@ -10,12 +10,11 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 })
 export class AdicaoLivroComponent {
 
-  isCaixaEdicaoAberta = false;
-  isTituloVazio = true;
   icon_check = '/assets/icons/check.svg';
   icon_lixo = '/assets/icons/lixo.svg';
   icon_fechar = '/assets/icons/fechar_branco.svg';
   icon_add = '/assets/icons/add.svg';
+  isAdicaoLivroAberto$ = this.livroService.isAdicaoLivroAberto$.asObservable();
 
   form = new FormGroup({
     titulo: new FormControl(''),
@@ -24,10 +23,19 @@ export class AdicaoLivroComponent {
 
   constructor(private livroService: LivroService) { }
 
+  abrirCaixaDeEdicao(): void {
+    this.livroService.isAdicaoLivroAberto$.next(true);
+  }
+
+  fecharCaixaDeEdicao(): void {
+    this.livroService.isAdicaoLivroAberto$.next(false);
+    this.form.reset();
+  }
+
   adicionarLivro(): void {
     const controlTitulo = this.form.get('titulo');
     const controlDescricao = this.form.get('descricao');
-    this.form.reset();
+
     if (controlTitulo.value === null) {
       return;
     }
@@ -37,16 +45,15 @@ export class AdicaoLivroComponent {
     }
 
     this.livroService.adicionarLivro(controlTitulo.value, controlDescricao.value)
-    .subscribe((livro: ILivro) => {
-      // window.location.reload();
+    .subscribe();
+
+    this.livroService.getAllLivros$().subscribe(res => {
+      this.livroService.livros$.next(res);
     });
+
+    this.livroService.isAdicaoLivroAberto$.next(false);
   }
 
   validarTitulo(): void {}
-
-  toggleCaixaDeEdicao(): void {
-    this.isCaixaEdicaoAberta = !this.isCaixaEdicaoAberta;
-    this.form.reset();
-  }
 
 }

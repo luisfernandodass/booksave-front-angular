@@ -10,32 +10,31 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 })
 export class HomeComponent implements OnInit {
 
-  livros$ = this.livroService.livros$;
+  livros: ILivro[];
   livrosBuscados: ILivro[];
   form: FormGroup;
+  isAdicaoLivroAberto$ = this.livroService.isAdicaoLivroAberto$.asObservable();
 
   constructor(private livroService: LivroService, private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       livroPesquisado: new FormControl()
     });
   }
-
+  
   ngOnInit(): void {
-    this.livroService.getAllLivros()
-      .subscribe((livros: ILivro[]) => {
-        this.livros$.next(livros);
-        this.livrosBuscados = livros;
+    this.livroService.getAllLivros$().subscribe();
+    this.livroService.livros$.subscribe((livros) => {
+      this.livros = (livros);
+      this.livrosBuscados = (livros);
+      console.log('livros', livros.length)
     });
   }
 
   buscarLivro(): void {
     this.form.controls['livroPesquisado'].valueChanges
     .subscribe((caracter) => {
-      this.livros$.subscribe((res) => {
-        res.filter((res) => {
-          this.livros$.next(res.titulo.toUpperCase().includes(caracter.toUpperCase()));
-          return res.titulo.toUpperCase().includes(caracter.toUpperCase());
-        });
+      this.livrosBuscados = this.livros.filter((res) => {
+        return res.titulo.toUpperCase().includes(caracter.toUpperCase());
       });
     });
   }

@@ -10,7 +10,7 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 export class LivroComponent implements OnInit {
 
   @Input() livro: ILivro;
-  isContainerEdicaoLivroOpen$ = this.livroService.isContainerEdicaoLivroOpen$;
+  isContainerEdicaoLivroOpen$ = this.livroService.isEdicaoLivroAberto$;
 
   constructor(private livroService: LivroService) { }
 

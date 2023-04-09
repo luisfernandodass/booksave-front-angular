@@ -1,18 +1,18 @@
 <button
-  *ngIf="!isCaixaEdicaoAberta"
+  *ngIf="(isAdicaoLivroAberto$ | async) === false"
   type="button" class="btn-abrir-container-edicao-livro"
-  (click)="toggleCaixaDeEdicao()"
+  (click)="abrirCaixaDeEdicao()"
 >
   +
 </button>
 
-<ng-container *ngIf="isCaixaEdicaoAberta">
+<ng-container *ngIf="(isAdicaoLivroAberto$ | async) === true">
   <div class="wrapper-adicao-livro">
     <img 
       style="padding-top: 1rem; fill: #FFF; color: #FFF;"
       [src]="icon_fechar" alt="" 
       class="btn-fechar-container-adicao-livro"
-      role="button" (click)="toggleCaixaDeEdicao()"
+      role="button" (click)="fecharCaixaDeEdicao()"
     >
 
     <form class="book-form" [formGroup]="form">
@@ -35,10 +35,10 @@
           [src]="icon_check" 
           alt="" role="button" 
           class="btn-update-book" 
-          [ngClass]="isTituloVazio ? 'btn-disabled' : 'btn-active'" 
           (click)="adicionarLivro()"
         >
       </div>
     </form>
   </div>
 </ng-container>
+<!-- [ngClass]="isTituloVazio ? 'btn-disabled' : 'btn-active'"  -->

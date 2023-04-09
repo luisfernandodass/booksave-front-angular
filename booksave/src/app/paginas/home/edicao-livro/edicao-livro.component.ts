@@ -13,12 +13,12 @@ export class EdicaoLivroComponent {
   constructor(private livroService: LivroService) { }
 
   deletarLivro(): void {
-    this.fechar();
     this.livroService.deletarLivro(this.livroService.livroAbertoState$.getValue().titulo);
+    this.fechar();
     console.log('deletar livro', this.livroService.livroAbertoState$.getValue().titulo);
   }
 
   fechar(): void {
-    this.livroService.isContainerEdicaoLivroOpen$.next(false);
+    this.livroService.isEdicaoLivroAberto$.next(false);
   }
 }

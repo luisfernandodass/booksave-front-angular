@@ -16,8 +16,14 @@ export class LivroService {
 
   getLivroById(): void {}
 
-  getAllLivros(): Observable<ILivro[]> {
-    return this.http.get('http://localhost:3000/livros/') as Observable<ILivro[]>
+  getAllLivros$(): Observable<ILivro[]> {
+    return this.http.get('http://localhost:3000/livros/')
+    .pipe(
+      map((res: any[]) => {
+        this.livros$.next(res);
+        return res;
+      })
+    ) as Observable<ILivro[]>
   }
 
   atualizarInfoLivro(titulo: string, descricao: string): Observable<ILivro> {
@@ -28,7 +34,7 @@ export class LivroService {
     return this.http.delete(`http://localhost:3000/livros/${titulo}`) as Observable<ILivro>;
   }
 
-  readonly livros$ = new BehaviorSubject<any[]>([]);
+  readonly livros$ = new BehaviorSubject<ILivro[]>([]);
   
   readonly livroAbertoState$ = new BehaviorSubject<ILivro>({
     id: 0,
@@ -38,5 +44,6 @@ export class LivroService {
     tags: []
   });
 
-  readonly isContainerEdicaoLivroOpen$ = new BehaviorSubject<boolean>(false);
+  readonly isEdicaoLivroAberto$ = new BehaviorSubject<boolean>(false);
+  readonly isAdicaoLivroAberto$ = new BehaviorSubject<boolean>(false);
 }
