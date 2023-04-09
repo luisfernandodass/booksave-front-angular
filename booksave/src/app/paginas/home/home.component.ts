@@ -10,7 +10,7 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 })
 export class HomeComponent implements OnInit {
 
-  livros: ILivro[];
+  livros$ = this.livroService.livros$;
   livrosBuscados: ILivro[];
   form: FormGroup;
 
@@ -22,17 +22,21 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.livroService.getAllLivros()
-      .subscribe((livro: ILivro[]) => {
-        this.livros = livro;
-        this.livrosBuscados = livro;
+      .subscribe((livros: ILivro[]) => {
+        this.livros$.next(livros);
+        this.livrosBuscados = livros;
     });
+  }
 
+  buscarLivro(): void {
     this.form.controls['livroPesquisado'].valueChanges
-      .subscribe((caracter) => {
-        this.livrosBuscados = this.livros.filter((res) => {
-          console.log('caracter', caracter, res.titulo);
-          return res.titulo.includes(caracter)
+    .subscribe((caracter) => {
+      this.livros$.subscribe((res) => {
+        res.filter((res) => {
+          this.livros$.next(res.titulo.toUpperCase().includes(caracter.toUpperCase()));
+          return res.titulo.toUpperCase().includes(caracter.toUpperCase());
         });
       });
+    });
   }
 }

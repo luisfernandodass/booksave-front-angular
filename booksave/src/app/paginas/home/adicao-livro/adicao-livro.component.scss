@@ -1,0 +1,94 @@
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn-fechar-container-adicao-livro {
+  position: fixed;
+  right: 0;
+}
+
+.wrapper-adicao-livro {
+  height: 30vh;
+  width: -webkit-fill-available;
+  background: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+
+  .book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    .body-form {
+
+      input {
+        font-family: 'Roboto';
+        background: transparent;
+        border: 0;
+        height: 1rem;
+      }
+
+      .book-name {
+        font-size: 1rem;
+        color: #FFF;
+      }
+
+      .book-name::placeholder {
+        color: #FFF;
+      }
+
+      .book-descricao {
+        font-size: 14px;
+        color: #8E8E93;
+      }
+    }
+
+    .btn-limpar {
+      background: transparent;
+      border: 0;
+      color: #FFF;
+    }
+
+    .footer-edicao-livro {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+.btn-abrir-container-edicao-livro {
+  background: #1c1c1c;
+  color: #FFF;
+  border: 0;
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+  height: 48px;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-adicionar-livro {
+  position: fixed;
+  right: 0;
+}

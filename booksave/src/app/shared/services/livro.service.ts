@@ -8,13 +8,6 @@ import { ILivro } from 'src/app/shared/interfaces/livro.interface';
 })
 export class LivroService {
 
-  readonly livroParaEditar$ = new BehaviorSubject<ILivro>({
-    'id': 0,
-    'titulo':  'Livro 0 ',
-    'descricao': 'lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsu lorem ipsulorem ipsu',
-    'favorito': false,
-    'tags': [ 'Ficção ', 'Aventura ', 'Biografia' ]
-  });
   constructor(private http: HttpClient) { }
 
   adicionarLivro(titulo: string, descricao?: string): Observable<ILivro> {
@@ -34,4 +27,16 @@ export class LivroService {
   deletarLivro(titulo: string): Observable<ILivro> {
     return this.http.delete(`http://localhost:3000/livros/${titulo}`) as Observable<ILivro>;
   }
+
+  readonly livros$ = new BehaviorSubject<any[]>([]);
+  
+  readonly livroAbertoState$ = new BehaviorSubject<ILivro>({
+    id: 0,
+    titulo: '',
+    descricao: '',
+    favorito: false,
+    tags: []
+  });
+
+  readonly isContainerEdicaoLivroOpen$ = new BehaviorSubject<boolean>(false);
 }

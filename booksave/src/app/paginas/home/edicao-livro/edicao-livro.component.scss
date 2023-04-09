@@ -1,87 +1,48 @@
-.flex-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.btn_abrir-caixa-edicao-livro {
-  background: #1c1c1c;
-  color: #FFF;
-  border: 0;
-
-  height: 4rem;
-  width: 100%;
-
-  cursor: pointer;
-  font-size: 2.5rem;
-
-  position: fixed;
-  bottom: 0;
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .wrapper-edicao-livro {
-  height: 30vh;
-  width: 100%;
-  background: #1C1C1C;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+    height: 70%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 
-  .top-edicao-livro {
-    display: flex;
-    justify-content: flex-end;
-  }
+    background: #FFF;
+    border-radius: 8px 8px 0px 0px;
+    padding: 1rem;
 
-  .book-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3rem;
-    width: 100%;
 
-    .body-form {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-      gap: .5rem;
-      width: 100%;
-
-      input {
-        font-family: 'Roboto';
-        background: transparent;
-        border: 0;
-        height: 1rem;
-      }
-
-      .book-name {
-        font-size: 1rem;
-        color: #FFF;
-      }
-
-      .book-name::placeholder {
-        color: #FFF;
-      }
-
-      .book-descricao {
-        font-size: 14px;
-        color: #8E8E93;
-      }
-    }
-
-    .footer-edicao-livro {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+    .btn-fechar {
       position: fixed;
-      bottom: 0;
       right: 0;
-      left: 0;
     }
-  }
+
+    h2 {
+        margin-top: 3rem;
+    }
+
+    .btn-deletar-livro {
+        background: transparent;
+        border: 1px solid red;
+        color: red;
+        height: 48px;
+        border-radius: 4px;
+        font-size: 1rem;
+        position: fixed;
+        margin-bottom: 2rem;
+        bottom: 0;
+        right: 1rem;
+        left: 1rem;
+    }
 }

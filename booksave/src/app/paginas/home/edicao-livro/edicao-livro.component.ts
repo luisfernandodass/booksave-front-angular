@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { ILivro } from 'src/app/shared/interfaces/livro.interface';
+import { Component } from '@angular/core';
 import { LivroService } from 'src/app/shared/services/livro.service';
 
 @Component({
@@ -8,40 +6,19 @@ import { LivroService } from 'src/app/shared/services/livro.service';
   templateUrl: './edicao-livro.component.html',
   styleUrls: ['./edicao-livro.component.scss']
 })
-export class EdicaoLivroComponent implements OnInit {
-
-  isCaixaEdicaoAberta = false;
-  isTituloVazio = true;
-  icon_check = '/assets/icons/check.svg';
-  icon_lixo = '/assets/icons/lixo.svg';
-  icon_fechar = '/assets/icons/fechar.svg';
-
-  form = new FormGroup({
-    titulo: new FormControl(''),
-    descricao: new FormControl('')
-  })
+export class EdicaoLivroComponent {
+  icon_fechar = '/assets/icons/fechar_preto.svg';
+  livro$ = this.livroService.livroAbertoState$.asObservable();
 
   constructor(private livroService: LivroService) { }
 
-  ngOnInit(): void {
-    console.log(this)
+  deletarLivro(): void {
+    this.fechar();
+    this.livroService.deletarLivro(this.livroService.livroAbertoState$.getValue().titulo);
+    console.log('deletar livro', this.livroService.livroAbertoState$.getValue().titulo);
   }
 
-  adicionarLivro(): void {
-    if (this.form.get('descricao')?.value == '') this.form.get('descricao')?.setValue('não há descricão');
-
-    this.livroService.adicionarLivro(this.form.get('titulo')?.value, this.form.get('descricao')?.value)
-      .subscribe((livro: ILivro) => {
-        console.log('livro adicionado', livro);
-        window.location.reload();
-      });
+  fechar(): void {
+    this.livroService.isContainerEdicaoLivroOpen$.next(false);
   }
-
-  validarTitulo(): void {}
-
-  toggleCaixaDeEdicao(): void {
-    this.isCaixaEdicaoAberta = !this.isCaixaEdicaoAberta;
-    this.form.reset();
-  }
-
 }

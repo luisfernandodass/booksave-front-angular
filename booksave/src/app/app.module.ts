@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './paginas/login/login.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { LivroComponent } from './paginas/home/livro/livro.component';
+import { AdicaoLivroComponent } from './paginas/home/adicao-livro/adicao-livro.component';
 import { EdicaoLivroComponent } from './paginas/home/edicao-livro/edicao-livro.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { EdicaoLivroComponent } from './paginas/home/edicao-livro/edicao-livro.c
     LoginComponent,
     HomeComponent,
     LivroComponent,
+    AdicaoLivroComponent,
     EdicaoLivroComponent
   ],
   imports: [
