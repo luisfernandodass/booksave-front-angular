@@ -15,10 +15,9 @@ export class EdicaoLivroComponent {
   deletarLivro(): void {
     this.livroService.deletarLivro(this.livroService.livroAbertoState$.getValue().titulo);
     this.fechar();
-    console.log('deletar livro', this.livroService.livroAbertoState$.getValue().titulo);
   }
 
   fechar(): void {
-    this.livroService.isEdicaoLivroAberto$.next(false);
+    this.livroService.isCaixaEdicaoLivroAberto$.next(false);
   }
 }

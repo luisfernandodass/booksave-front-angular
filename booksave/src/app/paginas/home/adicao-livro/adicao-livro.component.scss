@@ -24,34 +24,30 @@
   left: 0;
   padding: 1rem;
 
-  .book-form {
+  form {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 4rem;
+    input {
+      font-family: 'Roboto';
+      background: transparent;
+      border: 0;
+      height: 1rem;
+    }
 
-    .body-form {
+    .book-name {
+      font-size: 1rem;
+      color: #FFF;
+    }
 
-      input {
-        font-family: 'Roboto';
-        background: transparent;
-        border: 0;
-        height: 1rem;
-      }
+    .book-name::placeholder {
+      color: #FFF;
+    }
 
-      .book-name {
-        font-size: 1rem;
-        color: #FFF;
-      }
-
-      .book-name::placeholder {
-        color: #FFF;
-      }
-
-      .book-descricao {
-        font-size: 14px;
-        color: #8E8E93;
-      }
+    .book-descricao {
+      font-size: 14px;
+      color: #8E8E93;
     }
 
     .btn-limpar {
@@ -80,7 +76,8 @@
 
   position: fixed;
   bottom: 0;
-  height: 48px;
+  left: 0;
+  height: 62px;
   font-size: 2rem;
 
   display: flex;

@@ -10,7 +10,9 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 export class LivroComponent implements OnInit {
 
   @Input() livro: ILivro;
-  isContainerEdicaoLivroOpen$ = this.livroService.isEdicaoLivroAberto$;
+  isContainerEdicaoLivroOpen$ = this.livroService.isCaixaEdicaoLivroAberto$;
+  icon_arrow_right = '/assets/icons/arrow-right.svg';
+
 
   constructor(private livroService: LivroService) { }
 

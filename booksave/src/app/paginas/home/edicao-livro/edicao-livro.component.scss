@@ -11,9 +11,12 @@
 
 .wrapper-edicao-livro {
     height: 70%;
-    width: -webkit-fill-available;;
+    width: 100%;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
     background: #FFF;
     border-radius: 8px 8px 0px 0px;

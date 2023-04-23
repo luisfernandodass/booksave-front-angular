@@ -2,6 +2,8 @@
   *ngIf="(isAdicaoLivroAberto$ | async) === false"
   type="button" class="btn-abrir-container-edicao-livro"
   (click)="abrirCaixaDeEdicao()"
+  tabindex="1"
+  aria-label="clique para adicionar livros"
 >
   +
 </button>
@@ -10,35 +12,42 @@
   <div class="wrapper-adicao-livro">
     <img 
       style="padding-top: 1rem; fill: #FFF; color: #FFF;"
-      [src]="icon_fechar" alt="" 
+      [src]="icons.fechar" alt="" 
       class="btn-fechar-container-adicao-livro"
       role="button" (click)="fecharCaixaDeEdicao()"
+      tabindex="1"
+      aria-label="fechar" autofocus
     >
 
-    <form class="book-form" [formGroup]="form">
+    <form [formGroup]="form">
 
-      <div class="body-form">
-        <input class="book-name" type="text" placeholder="nome do livro" formControlName="titulo"
-          (change)="validarTitulo()"
-        />
+      <input class="book-name" type="text" 
+        placeholder="nome do livro" 
+        formControlName="titulo"
+        (change)="validarTitulo()"
+        tabindex="1"
+      />
 
-        <input class="book-descricao" type="text" placeholder="descrição do livro"
-          formControlName="descricao"
-        />
-      </div>
+      <input class="book-descricao" type="text" 
+        placeholder="descrição do livro"
+        formControlName="descricao"
+        tabindex="1"
+      />
 
-      <div class="flex-row" style="margin-bottom: 1rem">
-        <button type="button" class="btn-limpar" (click)="form.reset()">
+      <div class="flex-row" style="margin-top: 4rem;">
+        <button type="button" class="btn-limpar" (click)="form.reset()" tabindex="1">
           LIMPAR
         </button>
+        
         <img 
-          [src]="icon_check" 
+          [src]="icons.check" 
           alt="" role="button" 
           class="btn-update-book" 
           (click)="adicionarLivro()"
+          aria-label="confirmar adição de livro"
+          tabindex="1"
         >
       </div>
     </form>
   </div>
 </ng-container>
-<!-- [ngClass]="isTituloVazio ? 'btn-disabled' : 'btn-active'"  -->

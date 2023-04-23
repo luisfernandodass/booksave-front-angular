@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ILivro } from 'src/app/shared/interfaces/livro.interface';
 import { LivroService } from 'src/app/shared/services/livro.service';
+import { StateManagementService } from 'src/app/shared/services/state-management.service';
 
 @Component({
   selector: 'app-adicao-livro',
@@ -10,25 +11,26 @@ import { LivroService } from 'src/app/shared/services/livro.service';
 })
 export class AdicaoLivroComponent {
 
-  icon_check = '/assets/icons/check.svg';
-  icon_lixo = '/assets/icons/lixo.svg';
-  icon_fechar = '/assets/icons/fechar_branco.svg';
-  icon_add = '/assets/icons/add.svg';
-  isAdicaoLivroAberto$ = this.livroService.isAdicaoLivroAberto$.asObservable();
+  icons = {
+    check: '/assets/icons/check.svg',
+    fechar: '/assets/icons/fechar_branco.svg',
+  };
+  isAdicaoLivroAberto$ = this.livroService.isCaixaAdicaoLivroAberto$.asObservable();
+  livrosDemo: ILivro[] = [];
 
   form = new FormGroup({
     titulo: new FormControl(''),
     descricao: new FormControl('')
   })
 
-  constructor(private livroService: LivroService) { }
+  constructor(private livroService: LivroService, private stateManagementService: StateManagementService) { }
 
   abrirCaixaDeEdicao(): void {
-    this.livroService.isAdicaoLivroAberto$.next(true);
+    this.livroService.isCaixaAdicaoLivroAberto$.next(true);
   }
 
   fecharCaixaDeEdicao(): void {
-    this.livroService.isAdicaoLivroAberto$.next(false);
+    this.livroService.isCaixaAdicaoLivroAberto$.next(false);
     this.form.reset();
   }
 
@@ -40,18 +42,29 @@ export class AdicaoLivroComponent {
       return;
     }
     
-    if (controlDescricao.value === null) {
+    if (controlDescricao.value === null || controlDescricao.value === '') {
       controlDescricao.setValue('não há descricão');
     }
 
-    this.livroService.adicionarLivro(controlTitulo.value, controlDescricao.value)
-    .subscribe();
+    const livro = {
+      titulo: controlTitulo.value,
+      descricao: controlDescricao.value,
+      favorito: false,
+      tags: []
+    };
 
-    this.livroService.getAllLivros$().subscribe(res => {
-      this.livroService.livros$.next(res);
-    });
+    if (this.stateManagementService.isDemo$.getValue() === false) {
+      this.livroService.adicionarLivro(livro).subscribe();
+  
+      this.livroService.getAllLivros$().subscribe(res => {
+        this.livroService.livros$.next(res);
+      });
+    } else {
+      this.livrosDemo.push(livro);
+      this.stateManagementService.livros$.next(this.livrosDemo);
+    }
 
-    this.livroService.isAdicaoLivroAberto$.next(false);
+    this.livroService.isCaixaAdicaoLivroAberto$.next(false);
   }
 
   validarTitulo(): void {}

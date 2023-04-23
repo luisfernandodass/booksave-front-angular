@@ -1,0 +1,22 @@
+button {
+    height: 48px;
+    width: 90px;
+    position: absolute;
+    right: 0;
+    border: 0;
+
+    display: flex;
+    flex-direction: column-reverse;
+    
+    align-items: center;
+    gap: .5rem;
+
+    background: #f0e055;
+    border-radius: 0 0 0 8px;
+    padding: 8px;
+    z-index: 2000;
+}
+
+.modo-demo {
+    transform: rotate(180deg);
+}

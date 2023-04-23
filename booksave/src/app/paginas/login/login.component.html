@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="wrapper-login">
+
+  <div>
+    <h2 tabindex="1">Faça login na sua conta</h2>
+
+    <button type="button" class="btn-google" (click)="navigateToHome()"> 
+        <img src="../../../assets/icons/google.svg" alt="">
+        Continuar com o Google
+    </button>
+  </div>
+
+  <span style="width: 100%; text-align: center; color: #56504C; font-size: 1rem;">ou</span>
+
+  <form>
+    <input type="email" id="username" placeholder="nome do usuário">
+
+    <input type="password" id="senha" placeholder="senha" maxlength="8">
+
+    <button type="button" disabled="true" (click)="navigateToHome()">
+        entrar
+    </button>
+  </form>
+</div>

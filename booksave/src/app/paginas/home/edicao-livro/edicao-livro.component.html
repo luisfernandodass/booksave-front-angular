@@ -1,20 +1,16 @@
-<div class="overlay">
-    <div class="wrapper-edicao-livro">
-        <img
-          class="btn-fechar" 
-          [src]="icon_fechar" alt="" 
-          role="button"
-          (click)="fechar()"
-        >
+<div class="overlay" (click)="fechar()">
+</div>
 
-        <div class="info-livro">
-            <h2>{{ (livro$ | async).titulo }}</h2>
+<div class="wrapper-edicao-livro">
+  <img class="btn-fechar" [src]="icon_fechar" alt="" role="button" (click)="fechar()" aria-label="fechar" tabindex="1">
 
-            <p>{{ (livro$ | async).descricao }}</p>
-        </div>
+  <div class="info-livro">
+    <h2 tabindex="1">{{ (livro$ | async).titulo }}</h2>
 
-        <button type="button" class="btn-deletar-livro" (click)="deletarLivro()">
-            deletar livro
-        </button>
-    </div>
+    <p tabindex="1">{{ (livro$ | async).descricao }}</p>
+  </div>
+
+  <button type="button" class="btn-deletar-livro" (click)="deletarLivro()" tabindex="1">
+    deletar livro
+  </button>
 </div>

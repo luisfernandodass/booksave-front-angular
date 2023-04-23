@@ -1,5 +1,6 @@
-<button type="button" (click)="abrirLivro()">
-  {{ livro.titulo | uppercase}}
+<button type="button" (click)="abrirLivro()" tabindex="1">
+  {{ livro.titulo | uppercase}} 
+  <img [src]="icon_arrow_right" alt="seta direita" aria-hidden="true">
 </button>
 
 <ng-container *ngIf="isContainerEdicaoLivroOpen$ | async">

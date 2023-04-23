@@ -18,6 +18,8 @@ import { HomeComponent } from './paginas/home/home.component';
 import { LivroComponent } from './paginas/home/livro/livro.component';
 import { AdicaoLivroComponent } from './paginas/home/adicao-livro/adicao-livro.component';
 import { EdicaoLivroComponent } from './paginas/home/edicao-livro/edicao-livro.component';
+import { DemoToggleComponent } from './shared/components/demo-toggle/demo-toggle.component';
+import { ErrorComponent } from './shared/components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EdicaoLivroComponent } from './paginas/home/edicao-livro/edicao-livro.c
     HomeComponent,
     LivroComponent,
     AdicaoLivroComponent,
-    EdicaoLivroComponent
+    EdicaoLivroComponent,
+    DemoToggleComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 export interface ILivro {
-  id: number
+  id?: number
   titulo: string;
   descricao: string;
   favorito: boolean;
